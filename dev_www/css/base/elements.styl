@@ -1,0 +1,44 @@
+*, *::before, *::after
+	box-sizing border-box
+
+::-moz-selection
+	background-color: $goji
+	color #fff
+
+::selection
+	background-color: $goji
+
+html
+	height:100%
+
+body
+	color $acai
+	font-family: $primaryFont
+	font-size $bodyFontSize
+	font-weight normal
+	height 100%
+	margin 0
+
+a, p, button, input
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+a
+	text-decoration none
+
+ul, ol
+	padding-left 0
+
+li
+	list-style none
+
+h1, h2, h3, h4, h5, h6
+	margin 0
+
+button
+	appearance none
+	background-color transparent
+	border none
+	box-shadow none
+	cursor pointer
+	outline none

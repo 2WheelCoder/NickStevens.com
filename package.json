@@ -1,0 +1,39 @@
+{
+  "name": "nickstevens.com",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Stevens",
+  "license": "ISC",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "devDependencies": {
+    "browserify-shim": "^3.5.0",
+    "coffee-script": "^1.7.1",
+    "coffeeify": "^0.6.0",
+    "gulp": "^3.6.2",
+    "gulp-browserify": "^0.5.0",
+    "gulp-changed": "^0.3.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-cssmin": "^0.1.5",
+    "gulp-iconfont": "0.0.12",
+    "gulp-imagemin": "^0.5.1",
+    "gulp-jsmin": "^0.1.4",
+    "gulp-plumber": "^0.6.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-shell": "*",
+    "gulp-stylus": "^1.0.2",
+    "gulp-uglify": "~0.2.1",
+    "gulp-util": "^2.2.14",
+    "jade": "~0.28.2",
+    "jaden": "^0.3.0",
+    "jeet": "^5.2.10",
+    "jquery": "^2.1.1",
+    "nib": "^1.0.2"
+  }
+}
