@@ -1,6 +1,6 @@
 doctype html
 html(lang="en")
-	title
+	title Nick Stevens // User Experience Developer
 
 	meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 	meta(name="description", content="")
@@ -12,21 +12,26 @@ html(lang="en")
 	link(rel="stylesheet", href="css/styles.css")
 	script(src="js/scripts.js")
 
+	//- slashes favicon
 body
-	header.header-primary
-		h1 Nick Stevens
-		img.logo
-		ul.disciplines
-			li code
-			li ux
-			li design
-		nav.nav-primary
-			ul
-				li
-					a About
-				li
-					a Work
-				li
-					a Contact
+	.header-wrapper
+		header.header-primary
+			h1 Nick Stevens
+			ul.disciplines
+				li code
+				li ux
+				li design
+			
+			a.header-logo.icon-logo
+				//- span(aria-hidden="true", data-icon="&#xe60b;")
+				//- span.screen-reader-text Nick Stevens Logo
+			nav.nav-primary
+				ul
+					li
+						a About
+					li
+						a Work
+					li
+						a Contact
 
 block content
