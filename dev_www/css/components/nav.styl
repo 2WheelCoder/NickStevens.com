@@ -1,0 +1,24 @@
+.nav-primary
+	padding-bottom 0.2rem
+
+	& li
+		@extend $slashAfter
+		color $blue
+		display inline
+		font-size pxToRem(14)
+		margin-right 1.4rem
+
+		&::after
+			bottom 0.25rem
+			color $grey
+			font-size 0.6rem
+			right -1rem
+
+		&:last-child
+			margin-right 0
+
+		&:last-child::after
+			display none
+
+		// &:nth-child::after
+		// 	right 

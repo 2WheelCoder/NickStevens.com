@@ -13,8 +13,10 @@ html
 	font-size $globalFontSize
 
 body
-	font-family: $primaryFont
+	font-family $primaryFont
 	font-weight normal
+	margin 0
+	padding-top pxToRem(97)
 
 a, p, button, input
 	-webkit-font-smoothing antialiased
@@ -24,6 +26,7 @@ a
 	text-decoration none
 
 ul, ol
+	margin-bottom 0
 	padding-left 0
 
 li
