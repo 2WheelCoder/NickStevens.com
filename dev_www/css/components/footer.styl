@@ -1,0 +1,42 @@
+.footer-primary
+	padding-top 2rem
+
+	& .footer-logo,
+	& > div,
+	& .nav-social
+		@extend $responsiveBox
+		display flex
+		text-align center
+
+	& .icon-logo,
+	& .disciplines
+	& .nav-social ul
+		align-self center
+		padding-top 100%
+		width 100%
+
+	& .icon-logo
+		color $blue
+		font-size pxToRem(200)
+
+	& .nav-social
+		& li
+			display inline-block
+			margin-right .9rem
+			vertical-align middle
+
+			&:last-child
+				margin 0
+
+		& .icon
+			color $grey
+			font-size 1.8rem
+
+		& .icon-github
+			font-size 2.2rem
+
+		& .icon-twitter
+			font-size 2rem
+
+	& h2
+		@extend $visuallyHidden
