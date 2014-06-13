@@ -10,6 +10,7 @@ html(lang="en")
 	meta(property="og:description", content="")
 
 	link(rel="stylesheet", href="css/styles.css")
+	link(rel="stylesheet", href="css/vendor/stroll.min.css")
 	script(src="js/scripts.js")
 	link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700',rel='stylesheet', type='text/css')
 
@@ -19,21 +20,23 @@ body
 			div
 				h1 Nick Stevens
 				ul.disciplines
-					li code
-					li ux
-					li design
+					li ui developer
+					li design thinker
 			
 			a.header-logo.icon-logo
 
 			nav.nav-primary
+				//- what if this was a filter for the content boxes
+				//- masonry/isotope
 				ul
 					li
-						a About
+						a Projects
 					li
-						a Work
-					li
-						a Services
+						a Skills
 						//- this is the philosophy of how you work
+						//- possible titles: skills, philosophy, services
+					li
+						a About
 					li
 						a Contact
 

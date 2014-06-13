@@ -1,4 +1,11 @@
 $responsiveBox
-	column(1/3, gutter: 0)
 	height 0
-	padding-bottom 33.3333333333333%
+	padding-bottom 100%
+	
+	@media (min-width: 440px)
+		column(1/2, gutter: 0)
+		padding-bottom 50%
+
+	@media $screen-md-min
+		column(1/3, gutter: 0)
+		padding-bottom 33.3333333333333%

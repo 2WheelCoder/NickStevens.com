@@ -22,6 +22,9 @@ gulp.task 'html', ->
 	    .pipe gulp.dest 'build_www/'
 
 gulp.task 'scripts', ->
+	gulp.src 'dev_www/js/vendor/**/*.js'
+		.pipe gulp.dest 'local_www/js/vendor/'
+
 	return gulp.src 'dev_www/js/app.coffee', { read: false }
 		.pipe plumber()
 		.pipe browserify { transform: ['coffeeify'], extensions: ['.coffee'] }

@@ -2,13 +2,16 @@
 	background $white
 	border-bottom 2px solid $grey
 	box-shadow 0 20px 60px rgba(0,0,0,0.1)
+	min-height 6.0625rem
 
 .header-primary
-	align-items flex-end
-	display flex
-	justify-content space-around
 	padding-bottom 0.2rem
 	padding-top 1rem
+	
+	@media $screen-md-min
+		align-items flex-end
+		display flex
+		justify-content space-around
 
 	& h1
 		color $blue
@@ -18,14 +21,26 @@
 
 	& .header-logo
 		color $blue
+		float left
 		font-size pxToRem(72)
-		margin 0 auto
-		padding-bottom 0.3rem
 		text-align center
+
+		@media $screen-md-min
+			margin 0 auto
+			padding-bottom 0.3rem
 
 	& > div,
 	& nav
-		width 45%
+		float right
+		text-align right
+		width 80%
+
+		@media $screen-md-min
+			width 45%
+
+	& > div
+		@media $screen-md-min
+			text-align left
 
 	& nav
 		text-align right

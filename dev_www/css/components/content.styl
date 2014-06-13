@@ -1,139 +1,187 @@
 .content
-	> a,
-	> div,
-	> img
-		background $blue
+	& ul
+
+	& li
 		color $white
 		display flex
 		position relative
 		overflow hidden
 
-	> a img,
-	> div img
-		max-width 100%
-
-	> img
-		max-width 100%
-
-	& .headline h2
-		padding 1rem
-
-	& .project
-		background #000
-		align-items center
-		
-		& img
-			display block
-			margin 0 auto
-			width 50%
-			padding-top 100%
-
-	& .nav
+	& a
+		color $white
+		display flex
+		width 100%
+		padding-bottom 100%
 		text-align center
 
-		& .icon
-			align-self center
-			font-size pxToRem(85)
-			padding-top 100%
-			width 100%
+	& li img
+		max-width 100%
 
-	& .portrait img
+.headline
+	background $blue
+
+	& h2
+		padding 1rem
+
+.project
+	background #000
+	align-items center
+	
+	& a
+		padding-bottom 0
+
+	& img
+		display block
+		align-self center
+		margin 0 auto
+		padding-top 100%
+		width 50%
+
+.nav
+	background $blue
+	text-align center
+
+	& .icon
+		align-self center
+		font-size pxToRem(85)
+		padding-top 100%
+		text-align center
+		width 100%
+
+.portrait
+	background url('../img/nick-desk.jpg')
+	background-size cover
+
+	& img
 		height 100%
 
-	& .description
-		& p
-			font-size 0.9rem
-			padding 1rem
+.description
+	background $blue
+	transition all .5s ease
 
-	& .portfolio-image
-		& img
-			height 100%
+	& > p
+		bottom 1rem
+		font-size 0.9rem
+		margin-bottom 0
+		padding 1rem 1rem 0
+		position absolute
+		text-align right
 
-		& .icon
-			font-size 1.5rem
-			left 1rem
-			position absolute
-			top 1rem
+	&.expanded
+		background #fff
+		color $blue
+		column(2/3, gutter: 0)
+		float right
+		padding-bottom 66.66666666666%
 
-	& .tweet
-		background $darkGrey
+		& > p
+			display none
 
-		& .icon-twitter
-			font-size 2.3rem
-			left 0
-			position absolute
-			right 0
-			text-align center
-			top 20%
+	& .description-content
+		padding 2rem
 
-
-		& p
-			margin 50% 5% 0
-			padding-left 13%
-			position relative
-			text-align left
-
-			&::before
-				content "\e60a"
-				font-family 'icons'
-				speak none
-				font-style normal
-				font-weight normal
-				font-variant normal
-				text-transform none
-				line-height 1
-				position absolute
-				left 0
-				top 0.2rem
-	& .article
-		background $darkGrey
-
-		& .icon
-			font-size 2.3rem
-			left 0
-			position absolute
-			right 0
-			text-align center
-			top 20%
-
-		& article
-			margin 40% 5% 0
-
-		& h2
-			margin-bottom 0.5rem
-			text-align center
+		& h3
+			@extend $headingLeftSlashes
+			margin-top 4rem
 
 		& p
-			font-size 0.9rem
-			position relative
-			text-align center
-			margin 0 auto
-			width 80%
+			column(2/3, gutter: 0)
+			color $grey
 
-			&::before
-				content "\e60a"
-				font-family 'icons'
-				font-size 1.2rem
-				speak none
-				font-style normal
-				font-weight normal
-				font-variant normal
-				text-transform none
-				line-height 1
-				position absolute
-				left -13%
-				top -.3rem
+.portfolio-image
+	background url('../img/turntable.jpg')
+	background-size cover
 
-	& .repository
-		background $darkGrey
-		& .icon
-			font-size 2.3rem
-			left 0
+	& .icon
+		font-size 1.5rem
+		left 1rem
+		position absolute
+		top 1rem
+
+.tweet
+	background $darkGrey
+
+	& .icon-twitter
+		color $blue
+		font-size 2.3rem
+		left 0
+		position absolute
+		right 0
+		text-align center
+		top 20%
+
+
+	& p
+		margin 50% 5% 0
+		padding-left 13%
+		position relative
+		text-align left
+
+		&::before
+			content "\e60a"
+			font-family 'icons'
+			speak none
+			font-style normal
+			font-weight normal
+			font-variant normal
+			text-transform none
+			line-height 1
 			position absolute
-			right 0
-			text-align center
-			top 20%
+			left 0
+			top 0.2rem
 
-		& h2
-			margin 40% 5% 0
-			text-align center
+.article
+	background $darkGrey
+
+	& .icon
+		color $blue
+		font-size 2.3rem
+		left 0
+		position absolute
+		right 0
+		text-align center
+		top 20%
+
+	& article
+		margin 40% 5% 0
+
+	& h2
+		margin-bottom 0.5rem
+		text-align center
+
+	& p
+		font-size 0.9rem
+		position relative
+		text-align center
+		margin 0 auto
+		width 80%
+
+		&::before
+			content "\e60a"
+			font-family 'icons'
+			font-size 1.2rem
+			speak none
+			font-style normal
+			font-weight normal
+			font-variant normal
+			text-transform none
+			line-height 1
+			position absolute
+			left -13%
+			top -.3rem
+
+.repository
+	background $darkGrey
+
+	& .icon
+		color $blue
+		font-size 2.3rem
+		left 0
+		position absolute
+		right 0
+		text-align center
+		top 20%
+
+	& h2
+		margin 40% 5% 0
+		text-align center
