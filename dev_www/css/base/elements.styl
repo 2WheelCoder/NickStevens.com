@@ -3,11 +3,11 @@
 	margin-top 0
 
 ::-moz-selection
-	background-color: $goji
-	color #fff
+	// background-color: $goji
+	// color #fff
 
 ::selection
-	background-color: $goji
+	// background-color: $goji
 
 html
 	font-size $globalFontSize
@@ -23,6 +23,7 @@ a, p, button, input
 	-moz-osx-font-smoothing grayscale
 
 a
+	cursor pointer
 	text-decoration none
 
 ul, ol
@@ -33,7 +34,8 @@ li
 	list-style none
 
 h1, h2, h3, h4, h5, h6
-	// margin 0
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
 
 button
 	appearance none

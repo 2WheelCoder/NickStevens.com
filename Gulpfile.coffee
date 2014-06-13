@@ -34,7 +34,7 @@ gulp.task 'css', ->
 		.pipe stylus { use : [nib(), jeet()] }
 		.pipe gulp.dest 'local_www/css/'
 
-gulp.task 'templates', shell.task 'jaden -t dev_www/templates -d dev_www/js/templates.js -p .jade -b'
+gulp.task 'templates', shell.task 'jaden -t dev_www/templates -d local_www/js/templates.js -p .jade -b'
 
 gulp.task 'images', ->
 	return gulp.src 'dev_www/img/**/*.{png,jpg,jpeg,gif,svg}'
@@ -63,7 +63,7 @@ gulp.task 'build', ->
 		.pipe rename {suffix: '.min'}
 		.pipe gulp.dest 'build_www/css/'
 
-gulp.task 'default', ['templates', 'scripts', 'css'], ->
+gulp.task 'default', ['scripts', 'css'], ->
 	gulp.watch 'dev_www/jade/**/*.jade', ['html']
 	gulp.watch 'dev_www/templates/**/*.jade', ['templates']
 	gulp.watch 'dev_www/css/**/*.styl', ['css']

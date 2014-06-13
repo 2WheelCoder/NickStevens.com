@@ -1,13 +1,12 @@
 .content
-	// > a,
-	// > div,
-	// > img
-
 	> a,
-	> div
+	> div,
+	> img
 		background $blue
 		color $white
-		// padding 1rem
+		display flex
+		position relative
+		overflow hidden
 
 	> a img,
 	> div img
@@ -15,3 +14,127 @@
 
 	> img
 		max-width 100%
+
+	& .headline h2
+		padding 1rem
+
+	& .project
+		background #000
+		align-items center
+		
+		& img
+			display block
+			// height 50%
+			margin 0 auto
+			width 50%
+			padding-top 100%
+
+	& .nav
+		text-align center
+
+		& .icon
+			align-self center
+			font-size pxToRem(85)
+			padding-top 100%
+			width 100%
+
+	& .portrait img
+		height 100%
+
+	& .description
+		& p
+			font-size 0.9rem
+			padding 1rem
+
+	& .portfolio-image
+		& img
+			height 100%
+
+		& .icon
+			font-size 1.5rem
+			left 1rem
+			position absolute
+			top 1rem
+
+	& .tweet
+		background $darkGrey
+
+		& .icon-twitter
+			font-size 2.3rem
+			left 0
+			position absolute
+			right 0
+			text-align center
+			top 20%
+
+
+		& p
+			margin 50% 5% 0
+			padding-left 13%
+			position relative
+			text-align left
+
+			&::before
+				content "\e60a"
+				font-family 'icons'
+				speak none
+				font-style normal
+				font-weight normal
+				font-variant normal
+				text-transform none
+				line-height 1
+				position absolute
+				left 0
+				top 0.2rem
+	& .article
+		background $darkGrey
+
+		& .icon
+			font-size 2.3rem
+			left 0
+			position absolute
+			right 0
+			text-align center
+			top 20%
+
+		& article
+			margin 40% 5% 0
+
+		& h2
+			margin-bottom 0.5rem
+			text-align center
+
+		& p
+			font-size 0.9rem
+			position relative
+			text-align center
+			margin 0 auto
+			width 80%
+
+			&::before
+				content "\e60a"
+				font-family 'icons'
+				font-size 1.2rem
+				speak none
+				font-style normal
+				font-weight normal
+				font-variant normal
+				text-transform none
+				line-height 1
+				position absolute
+				left -13%
+				top -.3rem
+
+	& .repository
+		background $darkGrey
+		& .icon
+			font-size 2.3rem
+			left 0
+			position absolute
+			right 0
+			text-align center
+			top 20%
+
+		& h2
+			margin 40% 5% 0
+			text-align center
