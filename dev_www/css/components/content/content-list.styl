@@ -1,0 +1,26 @@
+.content-list
+	clear none
+	column(1/2, cycle: 2)
+	margin-bottom 4rem
+
+	& li
+		color $grey
+		display block
+		margin-bottom 0.6rem
+		padding-left 1rem
+		position relative
+
+		&:before
+			color $blue
+			content "\e604"
+			font-family 'icons'
+			font-size .7rem
+			left 0
+			padding-top .25rem
+			position absolute
+			speak none
+			font-weight normal
+			font-variant normal
+			text-transform none
+			line-height 1
+			-webkit-font-smoothing antialiased

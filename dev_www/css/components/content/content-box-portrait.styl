@@ -1,0 +1,20 @@
+.content-box-portrait
+	background url('../img/nick-desk.jpg')
+	background-size cover
+
+	& img
+		height 100%
+
+	.hover
+		background rgba(255,255,255,0.6)
+		margin-left -1px
+		opacity 0
+		width 100%
+		padding-bottom 100%
+		text-align center
+
+		transition opacity .2s ease
+
+	&:hover
+		.hover
+			opacity 1

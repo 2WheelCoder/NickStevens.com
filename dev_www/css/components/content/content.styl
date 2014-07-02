@@ -1,0 +1,68 @@
+// add a bg image
+.content
+	background $darkGrey
+
+	& > li
+		color $white
+		display flex
+		position relative
+		overflow hidden
+
+	& > li > a
+		color $white
+		display flex
+		width 100%
+		// padding-bottom 100%
+		text-align center
+
+	& li img
+		max-width 100%
+
+.content-interior
+	& .headline
+		& h2
+			text-align center
+			width 100%
+
+.content-box.expanded
+	column(1/1, gutter: 0)
+
+	background #fff
+	color $grey
+	height auto
+	padding-bottom 0
+	padding 2rem
+
+	// transition all .5s ease
+
+	.content-block
+		clear both
+		margin-bottom 4rem
+
+	& h3
+		@extend $headingLeftSlashes
+		margin-top 4rem
+
+	& h4
+		color $blue
+		font-size 1.1rem
+
+	& p
+		color $grey
+
+	& .description-content-image
+		column(2/5)
+		margin-bottom 1rem
+
+	@media $screen-md-min
+		column(2/3, gutter: 0)
+		float right
+		height 0
+		padding 2rem
+		padding-bottom 100*(7/3) %
+	
+
+	& .stagger
+		column(3/4, gutter: 0)
+		float right
+		margin-bottom 4rem

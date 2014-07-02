@@ -1,0 +1,35 @@
+.deliverables
+	& ul
+		@extend $clearfix
+
+	& li
+		column(1/5, gutter: 0)
+
+	& a
+		display block
+		position relative
+
+	& img
+		display block
+		width 100%
+
+	& h5
+		background rgba(255,255,255,0.8)
+		color $blue
+		font-size 1.1rem
+		margin 0
+		padding 0.5rem
+
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		left 0
+
+		transition opacity .2s ease
+
+		@media $screen-md-min
+			opacity 0
+
+		&:hover
+			opacity 1
