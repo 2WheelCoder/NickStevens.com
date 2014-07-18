@@ -13,10 +13,10 @@ jsmin = require 'gulp-jsmin'
 shell = require 'gulp-shell'
 jade = require 'gulp-jade'
 iconfont = require 'gulp-iconfont'
-refresh = require('gulp-livereload')
+refresh = require 'gulp-livereload'
 lrserver = require('tiny-lr')()
-express = require('express')
-livereload = require('connect-livereload')
+express = require 'express'
+livereload = require 'connect-livereload'
 livereloadport = 35729
 serverport = 3000
  
@@ -35,6 +35,7 @@ gulp.task 'html', ->
 		.pipe jade()
 		.pipe gulp.dest 'local_www/'
 		.pipe gulp.dest 'build_www/'
+		.pipe refresh(lrserver)
 
 gulp.task 'scripts', ->
 	gulp.src 'dev_www/js/vendor/**/*.js'
@@ -45,16 +46,18 @@ gulp.task 'scripts', ->
 		.pipe browserify { transform: ['coffeeify'], extensions: ['.coffee'] }
 		.pipe rename 'scripts.js'
 		.pipe gulp.dest 'local_www/js/'
-		.pipe(refresh(lrserver))
+		.pipe refresh(lrserver)
 
 gulp.task 'css', ->
 	return gulp.src 'dev_www/css/styles.styl'
 		.pipe plumber()
 		.pipe stylus { use : [nib(), jeet()] }
 		.pipe gulp.dest 'local_www/css/'
-		.pipe(refresh(lrserver))
+		.pipe refresh(lrserver)
 
-gulp.task 'templates', shell.task 'jaden -t dev_www/templates -d local_www/js/templates.js -p .jade -b'
+gulp.task 'templates', ->
+	shell.task 'jaden -t dev_www/templates -d local_www/js/templates.js -p .jade -b'
+	.pipe refresh(lrserver)	
 
 gulp.task 'images', ->
 	return gulp.src 'dev_www/img/**/*.{png,jpg,jpeg,gif,svg}'
@@ -63,6 +66,7 @@ gulp.task 'images', ->
 		.pipe imagemin()
 		.pipe gulp.dest 'local_www/img/'
 		.pipe gulp.dest 'build_www/img/'
+		.pipe refresh(lrserver)
 
 # gulp.task 'icons', ->
 # 	return gulp.src 'dev_www/icons/**/*.svg'
@@ -70,6 +74,13 @@ gulp.task 'images', ->
 # 		.on 'codepoints', (codepoints, options) ->
 # 	        console.log codepoints, options
 # 		.pipe gulp.dest 'local_www/fonts/'
+
+gulp.task 'serve', ->
+	# Set up your static fileserver, which serves files in the build dir
+	server.listen serverport
+
+	# Set up your livereload server
+	# lrserver.listen lrport
 
 gulp.task 'build', ->
 	gulp.src 'local_www/js/scripts.js'
@@ -82,13 +93,6 @@ gulp.task 'build', ->
 		.pipe cssmin()
 		.pipe rename {suffix: '.min'}
 		.pipe gulp.dest 'build_www/css/'
-
-gulp.task 'serve', ->
-	# Set up your static fileserver, which serves files in the build dir
-	server.listen serverport
-
-	# Set up your livereload server
-	# lrserver.listen lrport
 
 gulp.task 'default', ['scripts', 'css', 'serve'], ->
 	gulp.watch 'dev_www/jade/**/*.jade', ['html']
