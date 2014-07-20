@@ -1,5 +1,8 @@
 .content
 	center($containerMaxWidth)
+	
+	@media $screen-lg-min
+		center($containerMaxWidth, $primaryPadding)
 
 	& > li
 		@extend $responsiveBox

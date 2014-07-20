@@ -1,6 +1,10 @@
 .content-box-repository
 	background $darkGrey
 
+	&:hover
+		& .icon
+			transform scale3d(1.3, 1.3, 1)
+
 	& .icon
 		color $blue
 		font-size 2.3rem
@@ -9,6 +13,9 @@
 		right 0
 		text-align center
 		top 20%
+
+		transition transform .2s ease
+		transform-origin center
 
 	& h2
 		margin 40% 5% 0

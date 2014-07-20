@@ -9,7 +9,7 @@
 		@extend $clearfix
 
 		background $blue url('../img/nick-desk.jpg')
-		background-size cover
+		background-size contain
 		column(1/3, gutter: 0)
 		height 0
 		padding-bottom (100/3)%
@@ -60,3 +60,22 @@
 
 		@media $screen-lg-min
 			opacity 0
+
+	& .userflow
+		background $blue url('../img/userflow.png')
+		background-size contain
+
+	& .github
+		background $cueOrange
+		position relative
+
+		&:after
+			@extend $icon
+
+			color $white
+			content "\e603"
+			font-size 4rem
+			position absolute
+			text-align center
+			top 1rem
+			width 100%

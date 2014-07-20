@@ -34,7 +34,7 @@ gulp.task 'html', ->
 		.pipe plumber()
 		.pipe jade()
 		.pipe gulp.dest 'local_www/'
-		.pipe gulp.dest 'build_www/'
+		# .pipe gulp.dest 'build_www/'
 		.pipe refresh(lrserver)
 
 gulp.task 'scripts', ->
@@ -65,8 +65,13 @@ gulp.task 'images', ->
 		.pipe changed 'dev_www/img/**/*.{png,jpg,jpeg,gif,svg}'
 		.pipe imagemin()
 		.pipe gulp.dest 'local_www/img/'
-		.pipe gulp.dest 'build_www/img/'
+		# .pipe gulp.dest 'build_www/img/'
 		.pipe refresh(lrserver)
+
+gulp.task 'documents', ->
+	return gulp.src 'dev_www/documents/**/*'
+		.pipe gulp.dest 'local_www/documents/'
+		# .pipe gulp.dest 'build_www/documents/'
 
 # gulp.task 'icons', ->
 # 	return gulp.src 'dev_www/icons/**/*.svg'
@@ -100,4 +105,5 @@ gulp.task 'default', ['scripts', 'css', 'serve'], ->
 	gulp.watch 'dev_www/css/**/*.styl', ['css']
 	gulp.watch 'dev_www/js/**/*.coffee', ['scripts']
 	gulp.watch 'dev_www/img/**/*.{png,jpg,jpeg,gif,svg}', ['images']
+	gulp.watch 'dev_www/documents/**/*', ['documents']
 	# gulp.watch 'dev_www/icons/**/*.svg', ['icons']
