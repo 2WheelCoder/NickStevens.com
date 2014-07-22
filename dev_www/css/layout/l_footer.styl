@@ -1,2 +1,5 @@
 .footer-primary
-	center($containerMaxWidth, $primaryPadding)
+	center($containerMaxWidth)
+	
+	@media $screen-lg-min
+		center($containerMaxWidth, $primaryPadding)

@@ -1,31 +1,45 @@
-.content-box-tweet
+.content-box-recommendation
 	background $blue
 
 	&:hover
 		& .icon
 			transform scale3d(1.3, 1.3, 1)
 
-	& .icon-twitter
+	& .icon
 		color $white
 		font-size 2.3rem
 		left 0
 		position absolute
 		right 0
 		text-align center
-		top 20%
+		top 15%
 
 		transition transform .2s ease
 		transform-origin center
 
+	& article
+		margin 30% 5% 0
+
+	& h2
+		font-size 1.2rem
+		margin-bottom 0
+		text-align center
+
+	& h3
+		font-size 1rem
+		font-weight normal
+
 	& p
-		margin 50% 5% 0
-		padding-left 13%
+		font-size 0.9rem
 		position relative
-		text-align left
+		text-align center
+		margin 0 auto
+		width 80%
 
 		&::before
 			content "\e60a"
 			font-family 'icons'
+			font-size 1.2rem
 			speak none
 			font-style normal
 			font-weight normal
@@ -33,5 +47,5 @@
 			text-transform none
 			line-height 1
 			position absolute
-			left 0
-			top 0.2rem
+			left -13%
+			top .23rem
