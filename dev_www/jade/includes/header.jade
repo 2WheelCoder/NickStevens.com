@@ -10,11 +10,11 @@ html(lang="en")
 	meta(property="og:description", content="")
 
 	link(rel="stylesheet", href="/css/styles.css")
-	link(rel="stylesheet", href="/css/vendor/stroll.min.css")
+	//- link(rel="stylesheet", href="/css/vendor/stroll.min.css")
 	link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700',rel='stylesheet', type='text/css')
 
 body
-	.header-wrapper
+	#header-wrapper.header-wrapper
 		header.header-primary
 			div
 				h1 Nick Stevens
@@ -24,7 +24,7 @@ body
 			
 			a.header-logo.icon-logo
 
-			nav.nav-primary
+			nav#nav-primary.nav-primary
 				//- what if this was a filter for the content boxes
 				//- masonry/isotope
 				ul
@@ -38,5 +38,7 @@ body
 						a(href="about") About
 					li
 						a(href="contact") Contact
+
+			button#header-menu-btn.header-menu-btn
 
 block content

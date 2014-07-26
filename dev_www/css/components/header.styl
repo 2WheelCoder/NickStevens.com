@@ -1,11 +1,23 @@
 .header-wrapper
 	background $white
-	box-shadow 0 20px 60px rgba(0,0,0,0.1)
-	min-height 6.0625rem
+
+	@media $screen-sm-min
+		box-shadow 0 20px 60px rgba(0,0,0,0.1)
+
+	&.compact
+		@media $screen-md-min
+			& .header-logo
+				font-size 2.7rem
+				padding-bottom 0.2rem
 
 .header-primary
-	padding-bottom 0.2rem
-	padding-top 1rem
+	box-shadow 0 20px 60px rgba(0,0,0,0.1)
+	padding-bottom 0.5rem
+	padding-top 0.5rem
+
+	@media $screen-sm-min
+		box-shadow none
+		padding-bottom 0.2rem
 	
 	@media $screen-md-min
 		align-items flex-end
@@ -20,19 +32,31 @@
 
 	& .header-logo
 		color $blue
+		display none
 		float left
-		font-size pxToRem(72)
+		font-size 3.9rem
 		text-align center
 
+		transition font-size 0.3s ease
+
+		@media $screen-sm-min
+			display block
+			padding-top 0.3rem
+
 		@media $screen-md-min
+			font-size 5rem
 			margin 0 auto
 			padding-bottom 0.3rem
+			padding-top 0
 
 	& > div,
 	& nav
-		float right
 		text-align right
-		width 80%
+		width 100%
+
+		@media $screen-sm-min
+			float right
+			width 80%
 
 		@media $screen-md-min
 			width 45%
@@ -42,4 +66,23 @@
 			text-align left
 
 	& nav
-		text-align right
+		text-align center
+		
+		@media $screen-sm-min
+			text-align right
+
+	& .header-menu-btn
+		@extend $icon
+		color $blue
+		font-size 2.6rem
+		margin 0
+		padding 0
+		position absolute
+		top .5rem
+		left 0.7rem
+
+		@media $screen-sm-min
+			display none
+
+		&:after
+			content: "\e60b"

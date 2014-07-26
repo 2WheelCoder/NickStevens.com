@@ -34,7 +34,6 @@ gulp.task 'html', ->
 		.pipe plumber()
 		.pipe jade()
 		.pipe gulp.dest 'local_www/'
-		# .pipe gulp.dest 'build_www/'
 		.pipe refresh(lrserver)
 
 gulp.task 'scripts', ->
@@ -54,6 +53,10 @@ gulp.task 'css', ->
 		.pipe stylus { use : [nib(), jeet()] }
 		.pipe gulp.dest 'local_www/css/'
 		.pipe refresh(lrserver)
+
+gulp.task 'fonts', ->
+	return gulp.src 'dev_www/fonts/**/*'
+		.pipe gulp.dest 'local_www/fonts/'
 
 gulp.task 'templates', ->
 	shell.task 'jaden -t dev_www/templates -d local_www/js/templates.js -p .jade -b'
@@ -91,18 +94,31 @@ gulp.task 'build', ->
 	gulp.src 'local_www/js/scripts.js'
 		.pipe plumber()
 		.pipe jsmin()
-		.pipe rename {suffix: '.min'}
+		# .pipe rename {suffix: '.min'}
 		.pipe gulp.dest 'build_www/js/'
 		
 	gulp.src 'local_www/css/styles.css'
 		.pipe cssmin()
-		.pipe rename {suffix: '.min'}
+		# .pipe rename {suffix: '.min'}
 		.pipe gulp.dest 'build_www/css/'
+
+	gulp.src 'local_www/fonts/**/*'
+		.pipe gulp.dest 'build_www/fonts/'
+
+	gulp.src 'local_www/**/*.html'
+		.pipe gulp.dest 'build_www/'
+
+	gulp.src 'local_www/documents/**/*'
+		.pipe gulp.dest 'build_www/documents'
+
+	gulp.src 'local_www/img/**/*.{png,jpg,jpeg,gif,svg}'
+		.pipe gulp.dest 'build_www/img/'
 
 gulp.task 'default', ['scripts', 'css', 'serve'], ->
 	gulp.watch 'dev_www/jade/**/*.jade', ['html']
 	gulp.watch 'dev_www/templates/**/*.jade', ['templates']
 	gulp.watch 'dev_www/css/**/*.styl', ['css']
+	gulp.watch 'dev_www/fonts/**/*', ['fonts']
 	gulp.watch 'dev_www/js/**/*.coffee', ['scripts']
 	gulp.watch 'dev_www/img/**/*.{png,jpg,jpeg,gif,svg}', ['images']
 	gulp.watch 'dev_www/documents/**/*', ['documents']

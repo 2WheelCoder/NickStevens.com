@@ -1,0 +1,43 @@
+.form-contact
+	margin $mediumSpace auto 0
+	position relative
+	width 19.5rem
+
+	& label
+		display block
+		font-size pxToRem(11)
+		font-weight lighter
+		text-transform uppercase
+		margin-bottom $smallSpace
+
+		& > span
+
+			@media $screen-sm-min
+				left pxToRem(-82)
+				padding-top 0.6rem
+				position absolute
+				text-align right
+				width pxToRem(62)
+
+	& label > input
+
+		@media $screen-sm-min
+			margin-left 0
+
+	& input,
+	& textarea
+		border 1px solid $grey
+		display block
+		height 2rem
+		margin pxToRem(6) 0 pxToRem(12)
+		padding 0 pxToRem(14)
+		width 100%
+
+		@media $screen-sm-min
+			display table-cell
+			margin-top 0
+			width pxToRem(312)
+	
+	& textarea
+		height pxToRem(146)
+		resize none

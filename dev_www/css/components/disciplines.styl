@@ -4,9 +4,12 @@
 
 		color $grey
 		display inline
-		font-size pxToRem(22)
+		font-size pxToRem(16)
 		margin-right 1.4rem
 		text-transform lowercase
+
+		@media $screen-sm-min
+			font-size pxToRem(22)
 
 		&:last-child
 			margin-right 0
