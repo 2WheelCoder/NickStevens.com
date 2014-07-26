@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Nick Stevens": {
+            "applicationId": "9we6SeKGiuWtpiEHQDfsX6fgK72DwPKHhu4DYPH0", 
+            "masterKey": "unj3LFELhbCvV3peoonqlVe7ZL1iPYP6RraSgsue"
+        }, 
+        "_default": {
+            "link": "Nick Stevens"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.19"
+    }
+}

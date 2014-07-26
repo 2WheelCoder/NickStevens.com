@@ -19,22 +19,24 @@ ul.content
 			.content-block
 				h3 Contact Me
 
-				form.form-contact
+				form#form-contact.form-contact
 					label
 						span *Name
-						input(placeholder="ex. John Smith", required)
+						input#name(name="name", placeholder="ex. John Smith", required)
 
 					label
 						span *Email
-						input(placeholder="ex. john@smith.com", type="email", required)
+						input#email(name="email", placeholder="ex. john@smith.com", type="email", required)
 
 					label
 						span Phone
-						input
+						input#phone(name="phone")
 
 					label
 						span *Message
-						textarea(required)
+						textarea#message(name="message", required)
+
+					p#response.response
 
 					button.btn-cta submit
 
@@ -73,5 +75,7 @@ ul.content
 			article
 				h2 A Motorcycle Manifesto
 				p Big data fund thinker maker doer bootstrapping human centered design Steve Jobs agile intuitive thought.
+
+script(src="http://www.parsecdn.com/js/parse-1.2.16.min.js")
 
 include includes/footer
