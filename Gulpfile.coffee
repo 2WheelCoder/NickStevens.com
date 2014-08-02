@@ -78,7 +78,7 @@ gulp.task 'documents', ->
 
 gulp.task 'icons', ->
 	return gulp.src 'dev_www/icons/**/*.svg'
-		.pipe iconfont {fontName: 'icons', appendCodepoints: true }
+		.pipe iconfont {fontName: 'icons', appendCodepoints: true, normalize: true }
 		.on 'codepoints', (codepoints, options) ->
 	        console.log codepoints, options
 		.pipe gulp.dest 'local_www/fonts/'

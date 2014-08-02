@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="Layer_1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" sodipodi:docname="Briefcase.svg" inkscape:version="0.48.2 r9819"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="640px" height="506.9px"
+	 viewBox="14.9 336.8 640 506.9" enable-background="new 14.9 336.8 640 506.9" xml:space="preserve">
+<defs>
+	
+	<v:userDefs>
+		<v:ud  v:nameU="msvThemeColors" v:val="VT0(36):26"></v:ud>
+		<v:ud  v:nameU="msvThemeEffects" v:val="VT0(16):26"></v:ud>
+		<v:ud  v:nameU="msvThemeOrder" v:val="VT0(0):26"></v:ud>
+	</v:userDefs>
+	<v:pageProperties  v:drawingUnits="0" v:pageScale="1" v:shadowOffsetX="9" v:drawingScale="1" v:shadowOffsetY="-9">
+		</v:pageProperties>
+	<v:layer  v:name="Flowchart" v:index="0"></v:layer>
+	<v:custProps>
+		
+			<v:cp  v:nameU="Cost" v:cal="0" v:langID="1033" v:format="@" v:invis="false" v:ask="false" v:type="7" v:sortKey="" v:prompt="" v:lbl="Cost">
+			</v:cp>
+		
+			<v:cp  v:nameU="ProcessNumber" v:cal="0" v:langID="1033" v:format="" v:invis="false" v:ask="false" v:type="2" v:sortKey="" v:prompt="" v:lbl="Process Number">
+			</v:cp>
+		
+			<v:cp  v:nameU="Owner" v:cal="0" v:langID="1033" v:format="" v:invis="false" v:ask="false" v:type="0" v:sortKey="" v:prompt="" v:lbl="Owner">
+			</v:cp>
+		
+			<v:cp  v:nameU="Function" v:val="VT4()" v:cal="0" v:langID="1033" v:format="" v:invis="false" v:ask="false" v:type="0" v:sortKey="" v:prompt="" v:lbl="Function">
+			</v:cp>
+		
+			<v:cp  v:nameU="StartDate" v:cal="0" v:langID="1033" v:format="" v:invis="false" v:ask="false" v:type="5" v:sortKey="" v:prompt="" v:lbl="Start Date">
+			</v:cp>
+		
+			<v:cp  v:nameU="EndDate" v:cal="0" v:langID="1033" v:format="" v:invis="false" v:ask="false" v:type="5" v:sortKey="" v:prompt="" v:lbl="End Date">
+			</v:cp>
+		
+			<v:cp  v:nameU="Status" v:val="VT4()" v:cal="0" v:langID="1033" v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:invis="false" v:ask="false" v:type="4" v:sortKey="" v:prompt="" v:lbl="Status">
+			</v:cp>
+	</v:custProps>
+	<v:userDefs>
+		<v:ud  v:nameU="AntiScale" v:val="VT0(1):26"></v:ud>
+		<v:ud  v:nameU="visVersion" v:val="VT0(14):26" v:prompt=""></v:ud>
+		<v:ud  v:nameU="DefaultWidth" v:val="VT0(1):0" v:prompt=""></v:ud>
+		<v:ud  v:nameU="DefaultHeight" v:val="VT0(0.75):0" v:prompt=""></v:ud>
+		<v:ud  v:nameU="ResizeTxtHeight" v:val="VT0(0.75):0" v:prompt=""></v:ud>
+		<v:ud  v:nameU="msvThemeColors" v:val="VT0(36):26"></v:ud>
+		<v:ud  v:nameU="msvThemeEffects" v:val="VT0(16):26"></v:ud>
+	</v:userDefs>
+</defs>
+<sodipodi:namedview  guidetolerance="10" id="namedview21" inkscape:zoom="2.91" showgrid="false" inkscape:cy="50" pagecolor="#ffffff" objecttolerance="10" inkscape:cx="50" borderopacity="1" gridtolerance="10" bordercolor="#666666" inkscape:window-maximized="0" inkscape:window-y="0" inkscape:pageopacity="0" inkscape:window-height="888" inkscape:window-x="0" inkscape:window-width="1070" inkscape:current-layer="Layer_1" inkscape:pageshadow="2">
+	</sodipodi:namedview>
+<v:documentProperties  v:langID="1033" v:viewMarkup="false">
+	<v:userDefs>
+		<v:ud  v:nameU="msvNoAutoConnect" v:val="VT0(0):26"></v:ud>
+	</v:userDefs>
+</v:documentProperties>
+<path id="path6" d="M623,443.4H455.2v-74.8c0-17.3-14.6-31.9-31.9-31.9H246.5c-17.3,0-31.9,14.6-31.9,31.9v74.8H46.8
+	c-17.3,0-31.9,14.6-31.9,31.9v336.4c0,17.3,14.6,31.9,31.9,31.9H623c17.3,0,31.9-14.6,31.9-31.9V475.3
+	C654.9,458,640.3,443.4,623,443.4z M253.8,413.3c0-41,10-41.9,46.5-41.9h69.3c28.3,0,46.5-2.7,46.5,41.9v30.1H253.8V413.3z"/>
+</svg>
