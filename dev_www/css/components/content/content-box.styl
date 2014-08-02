@@ -1,9 +1,12 @@
 .content-box.expanded
 	column(1/1, gutter: 0)
 
-	background #fff
-	color $grey
+	// background #fff
+	// color $grey
 	height auto
+	// height 0
+	// padding-bottom (33.33333333333333333333333333333333333333%)*8
+	// padding-bottom (66.6666666666667%)*3
 	padding-bottom 0
 
 	// transition all .5s ease
@@ -23,6 +26,9 @@
 	& p
 		color $grey
 		line-height 1.4
+
+	& a
+		color $blue
 
 	@media $screen-md-min
 		column(2/3, gutter: 0)
@@ -61,3 +67,6 @@
 
 	&:hover
 		background-size 60% auto
+	
+	&.no-hover:hover
+		background-size 55% auto

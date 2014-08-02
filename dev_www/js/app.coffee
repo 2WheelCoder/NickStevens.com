@@ -7,6 +7,7 @@ class App
 		@$window = $(window)
 		@$navPrimary = $('#nav-primary')
 		@$headerWrapper = $('#header-wrapper')
+		@$body = $('body')
 		@attachEvents()
 
 		if window.siteSettings? and window.siteSettings.page is 'contact'
@@ -19,8 +20,11 @@ class App
 			@$window.on 'scroll touchmove', ->
 				if self.$window.scrollTop() > 0
 					self.$headerWrapper.addClass('compact')
+					self.$body.css 'padding-top', '4rem'
 				else
 					self.$headerWrapper.removeClass('compact')
+					self.$body.css 'padding-top', '5rem'
+					
 
 		if @$window.width() < 481
 			$('#header-menu-btn').click ->

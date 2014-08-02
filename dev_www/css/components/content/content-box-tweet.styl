@@ -17,15 +17,22 @@
 		transition transform .2s ease
 		transform-origin center
 
+	& .content-box-tweet-content
+		margin-top 50%
+		width 100%
+
 	& p
-		margin 50% 5% 0
-		padding-left 13%
+		font-weight bold
+		line-height 1.3
+		margin 0 auto
 		position relative
-		text-align left
+		text-align center
+		width 70%
 
 		&::before
 			content "\e60a"
 			font-family 'icons'
+			font-size 1.2rem
 			speak none
 			font-style normal
 			font-weight normal
@@ -33,5 +40,20 @@
 			text-transform none
 			line-height 1
 			position absolute
-			left 0
-			top 0.2rem
+			left -15%
+			top -.3rem
+
+		&::after
+			content "\e60a"
+			font-family 'icons'
+			font-size 1.2rem
+			speak none
+			font-style normal
+			font-weight normal
+			font-variant normal
+			text-transform none
+			line-height 1
+			position absolute
+			right -15%
+			bottom -.3rem
+			transform rotate(180deg)

@@ -76,12 +76,12 @@ gulp.task 'documents', ->
 		.pipe gulp.dest 'local_www/documents/'
 		# .pipe gulp.dest 'build_www/documents/'
 
-# gulp.task 'icons', ->
-# 	return gulp.src 'dev_www/icons/**/*.svg'
-# 		.pipe iconfont {fontName: 'icons', appendCodepoints: true }
-# 		.on 'codepoints', (codepoints, options) ->
-# 	        console.log codepoints, options
-# 		.pipe gulp.dest 'local_www/fonts/'
+gulp.task 'icons', ->
+	return gulp.src 'dev_www/icons/**/*.svg'
+		.pipe iconfont {fontName: 'icons', appendCodepoints: true }
+		.on 'codepoints', (codepoints, options) ->
+	        console.log codepoints, options
+		.pipe gulp.dest 'local_www/fonts/'
 
 gulp.task 'serve', ->
 	# Set up your static fileserver, which serves files in the build dir
@@ -122,4 +122,3 @@ gulp.task 'default', ['scripts', 'css', 'serve'], ->
 	gulp.watch 'dev_www/js/**/*.coffee', ['scripts']
 	gulp.watch 'dev_www/img/**/*.{png,jpg,jpeg,gif,svg}', ['images']
 	gulp.watch 'dev_www/documents/**/*', ['documents']
-	# gulp.watch 'dev_www/icons/**/*.svg', ['icons']
