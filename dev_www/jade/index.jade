@@ -10,23 +10,27 @@ ul.content
 	li.content-box-description
 		p I design and build user experiences that contribute focus, productivity and meaning to user&#39;s lives.
 
-	li.content-box-cue
-		a(href="/projects/cue")			
-
-	li.content-box-nav.nav-work
+	li.content-box-nav.nav-process
 		a(href="/projects")
-			.icon.icon-portfolio
-			h3 projects
+			.icon.icon-process
+			h3 process
 
 	li.content-box-portfolio-image.content-box-portfolio-image-2
 		a(href="http://500px.com/photo/49573736/andrea-gibson-poet-performing-at-world-aids-day-2009-by-nick-stevens", target="_blank")
 			.icon.icon-500px
-	
+
+	li.content-box-nav.nav-projects
+		a(href="/projects")
+			.icon.icon-portfolio
+			h3 projects
+
+	include includes/projects-nav
+
 	li.content-box-nav.nav-about
 		a(href="#")
 			.icon.icon-info
 			h3 about
-
+	
 	li.content-box-portfolio-image.content-box-portfolio-image-13
 		a(href="http://500px.com/photo/49579922/nylon-string-guitar-by-nick-stevens", target="_blank")
 			.icon.icon-500px
@@ -36,10 +40,10 @@ ul.content
 			.icon.icon-mail
 			h3 contact
 
+	li.content-box-portfolio-image.content-box-portfolio-image-23
+		a(href="http://500px.com/photo/49574674/turntable-at-l'ethno-by-nick-stevens", target="_blank")
+			.icon.icon-500px
 	
-	li.content-box-hooch
-		a(href="projects/hooch")
-
 	li.content-box-recommendation
 		a(href="https://www.linkedin.com/profile/view?id=33217625&authType=name&authToken=gzTa&locale=en_US&pvs=pp&trk=ppro_viewmore#endorsements", target="_blank")
 			.icon.icon-linkedin
@@ -66,10 +70,6 @@ ul.content
 		a(href="https://github.com/2WheelCoder/ble-peripheral-manager", target="_blank")
 			.icon.icon-github
 			h2 BLE Peripehral Manager PhoneGap Plugin
-
-	li.content-box-one
-		a(href="projects/one")
-
 
 	li.content-box-tweet
 		a(href="https://twitter.com/NicholasStevens/status/432931620299870209", target="_blank")
@@ -147,10 +147,6 @@ ul.content
 				h2 Julie Morey, Design &amp; Photography Director
 				h3 The Hooch Life
 				p Nick Stevens is a natural photojournalist&mdash;part observer, part storyteller, and part technician&hellip;his work has feeling.
-
-	li.content-box-portfolio-image.content-box-portfolio-image-23
-		a(href="http://500px.com/photo/49574674/turntable-at-l'ethno-by-nick-stevens", target="_blank")
-			.icon.icon-500px
 	
 	//- li.content-box-portfolio-image.content-box-portfolio-image-11
 	//- 	a(href="http://500px.com/photo/49579740/michael-gungor-gungor-by-nick-stevens", target="_blank")

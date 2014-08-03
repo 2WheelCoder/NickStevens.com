@@ -1,12 +1,17 @@
 // add a bg image
 .content
 	background $white
+	clear both
 
 	& > li
 		color $white
+		clear both
 		display flex
 		position relative
 		overflow hidden
+
+		@media $screen-sm-min
+			clear none
 
 	& > li > a
 		color $white
