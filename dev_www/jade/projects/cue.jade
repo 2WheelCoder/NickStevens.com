@@ -1,15 +1,20 @@
 include ../includes/header
 
-ul.content
+script
+	:coffee
+		window.siteSettings = window.siteSettings || {}
+		window.siteSettings.page = 'project'
+
+ul#primary-content.content
 	li.content-box-headline
 		h2 Project: Cue
 
-	li.content-box-cue.no-hover
+	li.content-box-project.content-box-project-cue.no-hover
 
 	li.content-box-description
 		p Meet new people nearby.
 
-	li.content-box.expanded
+	li.content-box.cue.expanded
 		.content-main
 			.content-block
 				h3 Description
@@ -117,32 +122,58 @@ ul.content
 
 		include ../includes/projects-nav
 
-		//- li.content-box-nav.nav-work
-		//- 	a(href="/projects")
-		//- 		.icon.icon-portfolio
-		//- 		h3 projects
+		li.content-box-nav.nav-process
+			a(href="/projects")
+				.icon.icon-process
+				h3 process
 
-		//- li.content-box-portfolio-image.content-box-portfolio-image-2
-		//- 	a(href="http://500px.com/photo/49573736/andrea-gibson-poet-performing-at-world-aids-day-2009-by-nick-stevens", target="_blank")
-		//- 		.icon.icon-500px
-		
-		//- li.content-box-nav.nav-about
-		//- 	a(href="#")
-		//- 		.icon.icon-info
-		//- 		h3 about
+		li.content-box-nav.nav-about
+			a(href="#")
+				.icon.icon-info
+				h3 about
 
-		//- li.content-box-portfolio-image.content-box-portfolio-image-13
-		//- 	a(href="http://500px.com/photo/49579922/nylon-string-guitar-by-nick-stevens", target="_blank")
-		//- 		.icon.icon-500px
-	ul.content
 		li.content-box-nav.nav-contact
 			a(href="#")
 				.icon.icon-mail
 				h3 contact
 
+		//- li.content-box-portfolio-image.content-box-portfolio-image-2
+		//- 	a(href="http://500px.com/photo/49573736/andrea-gibson-poet-performing-at-world-aids-day-2009-by-nick-stevens", target="_blank")
+		//- 		.icon.icon-500px
+
+		//- li.content-box-portfolio-image.content-box-portfolio-image-18
+		//- 	a(href="http://500px.com/photo/75207215/zeebo-w-see-i-by-nick-stevens", target="_blank")
+		//- 		.icon.icon-500px
 		
-		li.content-box-hooch
-			a(href="projects/hooch")
+		//- li.content-box-portfolio-image.content-box-portfolio-image-13
+		//- 	a(href="http://500px.com/photo/49579922/nylon-string-guitar-by-nick-stevens", target="_blank")
+		//- 		.icon.icon-500px
+
+		//- li.content-box-portfolio-image.content-box-portfolio-image-19
+		//- 	a(href="http://500px.com/photo/76156747/the-panache-by-nick-stevens", target="_blank")
+		//- 		.icon.icon-500px
+
+		//- li.content-box-portfolio-image.content-box-portfolio-image-4
+		//- 	a(href="http://500px.com/photo/49576942/geneva-time-by-nick-stevens", target="_blank")
+		//- 		.icon.icon-500px
+
+		li.content-box-portfolio-image.content-box-portfolio-image-24
+			a(href="http://500px.com/photo/49576710/les-alpes-by-nick-stevens", target="_blank")
+				.icon.icon-500px
+
+		li.content-box-portfolio-image.content-box-portfolio-image-22
+			a(href="http://500px.com/photo/77166105/brewing-bicycle-rims-and-disco-balls-by-nick-stevens", target="_blank")
+				.icon.icon-500px
+
+		li.content-box-tweet
+			a(href="https://twitter.com/NicholasStevens/status/490603802475499520", target="_blank")
+				.icon.icon-twitter
+				.content-box-tweet-content
+					p My startup, @cue_app was featured in @Digiday! &ldquo;The Kids are Alright&rdquo; http://bit.ly/1wJNlyC
+
+		li.content-box-portfolio-image.content-box-portfolio-image-23
+			a(href="http://500px.com/photo/49574674/turntable-at-l'ethno-by-nick-stevens", target="_blank")
+				.icon.icon-500px
 
 		li.content-box-recommendation
 			a(href="https://www.linkedin.com/profile/view?id=33217625&authType=name&authToken=gzTa&locale=en_US&pvs=pp&trk=ppro_viewmore#endorsements", target="_blank")
@@ -152,37 +183,19 @@ ul.content
 					h3 The Hooch Life
 					p A programming team of ONE GUY, the buck started and stopped with Nick&hellip;and he never let us down.
 
-		li.content-box-portfolio-image.content-box-portfolio-image-24
-			a(href="http://500px.com/photo/49576710/les-alpes-by-nick-stevens", target="_blank")
+		li.content-box-portfolio-image.content-box-portfolio-image-21
+			a(href="http://500px.com/photo/76836963/a-deadly-drink-by-nick-stevens", target="_blank")
 				.icon.icon-500px
-
-		li.content-box-tweet
-			a(href="https://twitter.com/NicholasStevens/status/490603802475499520", target="_blank")
-				.icon.icon-twitter
-				p My startup, @cue_app was featured in @Digiday! &ldquo;The Kids are Alright&rdquo; http://bit.ly/1wJNlyC
-		
-		li.content-box-portfolio-image.content-box-portfolio-image-4
-			a(href="http://500px.com/photo/49576942/geneva-time-by-nick-stevens", target="_blank")
-				.icon.icon-500px
-
-		li.content-box-repository
-			a(href="https://github.com/2WheelCoder/ble-peripheral-manager", target="_blank")
-				.icon.icon-github
-				h2 BLE Peripehral Manager PhoneGap Plugin
-
-		li.content-box-one
-			a(href="projects/one")
-
 
 		li.content-box-tweet
 			a(href="https://twitter.com/NicholasStevens/status/432931620299870209", target="_blank")
 				.icon.icon-twitter
-				p Ladies and gentlemen, I give you Startup Ipsum &mdash; the ipsum generator of your techie dreams. @BDWc6 creation. http://startupipsum.io
+				.content-box-tweet-content
+					p Ladies and gentlemen, I give you Startup Ipsum &mdash; the ipsum generator of your techie dreams. @BDWc6 creation. http://startupipsum.io
 
-		li.content-box-portfolio-image.content-box-portfolio-image-19
-			a(href="http://500px.com/photo/76156747/the-panache-by-nick-stevens", target="_blank")
+		li.content-box-portfolio-image.content-box-portfolio-image-1
+			a(href="http://500px.com/photo/78399181/sandra-by-nick-stevens", target="_blank")
 				.icon.icon-500px
-				
 
 		li.content-box-recommendation
 			a(href="https://www.linkedin.com/profile/view?id=33217625&authType=name&authToken=gzTa&locale=en_US&pvs=pp&trk=ppro_viewmore#endorsements", target="_blank")
@@ -191,15 +204,15 @@ ul.content
 					h2 Kim Smith, Deputy Field Director
 					h3 The ONE Campaign
 					p He was always amazingly dedicated, hard working and detail oriented and I never once was concerned he wouldn&#39;t come through fully with what he promised to do.
-		
-		li.content-box-portfolio-image.content-box-portfolio-image-22
-			a(href="http://500px.com/photo/77166105/brewing-bicycle-rims-and-disco-balls-by-nick-stevens", target="_blank")
+
+		li.content-box-portfolio-image.content-box-portfolio-image-3
+			a(href="http://500px.com/photo/49577346/l'ethno-dj-by-nick-stevens", target="_blank")
 				.icon.icon-500px
-					
-		li.content-box-tweet
-			a(href="https://twitter.com/NicholasStevens/status/386282150305091584", target="_blank")
-				.icon.icon-twitter
-				p Prototypin&#39; @bdwcu
+
+		li.content-box-repository
+			a(href="https://github.com/2WheelCoder/ble-peripheral-manager", target="_blank")
+				.icon.icon-github
+				h2 BLE Peripehral Manager PhoneGap Plugin
 
 		li.content-box-portfolio-image.content-box-portfolio-image-16
 			a(href="http://500px.com/photo/49580086/maserati-motorcycle-by-nick-stevens", target="_blank")
@@ -213,31 +226,28 @@ ul.content
 					h3 The Hooch Life
 					p He was easy to work with and dedicated to producing the highest quality product. I always found Nick to be very motivated to learn more and share what he knew.
 
-		li.content-box-portfolio-image.content-box-portfolio-image-3
-			a(href="http://500px.com/photo/49577346/l'ethno-dj-by-nick-stevens", target="_blank")
+		li.content-box-portfolio-image.content-box-portfolio-image-11
+			a(href="http://500px.com/photo/49579740/michael-gungor-gungor-by-nick-stevens", target="_blank")
 				.icon.icon-500px
-					
+
 		li.content-box-tweet
-			a(href="https://twitter.com/NicholasStevens/status/384485295971770368", target="_blank")
+			a(href="https://twitter.com/NicholasStevens/status/386282150305091584", target="_blank")
 				.icon.icon-twitter
-				p First coffee spill in my #moleskine. Milestone?
+				.content-box-tweet-content
+					p Prototypin&#39; @bdwcu
 
-
-
-		li.content-box-portfolio-image.content-box-portfolio-image-21
-			a(href="http://500px.com/photo/76836963/a-deadly-drink-by-nick-stevens", target="_blank")
+		li.content-box-portfolio-image.content-box-portfolio-image-5
+			a(href="http://500px.com/photo/49578822/rue-des-deux-ponts-by-nick-stevens", target="_blank")
 				.icon.icon-500px
 
-		li.content-box-recommendation
-			a(href="https://www.linkedin.com/profile/view?id=33217625&authType=name&authToken=gzTa&locale=en_US&pvs=pp&trk=ppro_viewmore#endorsements", target="_blank")
-				.icon.icon-linkedin
-				article
-					h2 Ranna Armstrong, Project Coordinator
-					h3 The ONE Campaign
-					p Despite the need to juggle multiple priorities, he never missed a deadline&hellip;Nick goes the extra mile &mdash; sometimes literally &mdash; and knows how to get things done and get them done fast.
+		li.content-box-tweet
+			a(href="https://twitter.com/NicholasStevens/status/479008538732527616", target="_blank")
+				.icon.icon-twitter
+				.content-box-tweet-content
+					p #SASS #LESS and #Stylus walked into a Skype conversation&hellip; #css3 #humor with @ANoffsinger
 
-		li.content-box-portfolio-image.content-box-portfolio-image-18
-			a(href="http://500px.com/photo/75207215/zeebo-w-see-i-by-nick-stevens", target="_blank")
+		li.content-box-portfolio-image.content-box-portfolio-image-9
+			a(href="http://500px.com/photo/49579288/the-rouge-by-nick-stevens", target="_blank")
 				.icon.icon-500px
 
 		li.content-box-recommendation
@@ -248,8 +258,16 @@ ul.content
 					h3 The Hooch Life
 					p Nick Stevens is a natural photojournalist&mdash;part observer, part storyteller, and part technician&hellip;his work has feeling.
 
-		li.content-box-portfolio-image.content-box-portfolio-image-23
-			a(href="http://500px.com/photo/49574674/turntable-at-l'ethno-by-nick-stevens", target="_blank")
+		li.content-box-portfolio-image.content-box-portfolio-image-15
+			a(href="http://500px.com/photo/49580010/tuning-impala-deluxe-by-nick-stevens", target="_blank")
 				.icon.icon-500px
+
+		li.content-box-tweet
+			a(href="https://twitter.com/NicholasStevens/status/384485295971770368", target="_blank")
+				.icon.icon-twitter
+				.content-box-tweet-content
+					p First coffee spill in my #moleskine. Milestone?
+
+ul#secondary-content.content
 
 include ../includes/footer

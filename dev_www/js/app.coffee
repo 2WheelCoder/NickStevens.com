@@ -10,6 +10,15 @@ class App
 		@$body = $('body')
 		@attachEvents()
 
+		if window.siteSettings? and window.siteSettings.page is 'project'
+			if @$window.width() < 1025
+				$('#primary-content')
+					.children('.content-box-project')
+					.last()
+					.nextAll()
+					.remove()
+					.appendTo('#secondary-content')
+
 		if window.siteSettings? and window.siteSettings.page is 'contact'
 			new Contact()
 
@@ -23,7 +32,7 @@ class App
 					self.$body.css 'padding-top', '4rem'
 				else
 					self.$headerWrapper.removeClass('compact')
-					self.$body.css 'padding-top', '5rem'
+					self.$body.css 'padding-top', '6rem'
 					
 
 		if @$window.width() < 481

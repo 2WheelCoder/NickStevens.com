@@ -21,6 +21,7 @@
 	& h3
 		bottom 20%
 		font-size 2rem
+		font-weight normal
 		left 0
 		margin 0
 		position absolute
@@ -31,11 +32,23 @@
 		transition opacity 0.3s ease
 
 	& .arrow
-		bottom 2%
 		font-size 3rem
 		font-weight bold
 		left 40%
 		position absolute
 		text-align center
+		top 66%
 		transform rotate(0.25turn)
 		width 20%
+
+	&.nav-unlinked
+		& .icon
+			align-self auto
+			left 0
+			padding-top 0
+			position absolute
+			top 26%
+
+		& h3
+			bottom auto
+			top 55%

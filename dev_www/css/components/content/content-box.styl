@@ -33,8 +33,12 @@
 	@media $screen-md-min
 		column(2/3, gutter: 0)
 		float right
-		// height 0
-		// padding-bottom 100*(13/3) %
+
+	@media $screen-lg-min
+		&.cue
+			height 0
+			// padding-bottom 100*(9/3) %
+			padding-bottom 300.1%
 	
 
 	& .stagger
@@ -45,28 +49,3 @@
 .content-box-portrait
 	background url('../img/nick-desk.jpg')
 	background-size cover
-
-.content-box-cue
-	@extend $contentBoxBG
-
-	background-color $cueOrange
-	background-image url('../img/cue-logo.png')
-
-.content-box-one
-	@extend $contentBoxBG
-
-	background-color $black
-	background-image url('../img/one.jpg')
-
-.content-box-hooch
-	@extend $contentBoxBG
-
-	background-color $black
-	background-image url('../img/hooch.png')
-	background-size 55% auto
-
-	&:hover
-		background-size 60% auto
-	
-	&.no-hover:hover
-		background-size 55% auto

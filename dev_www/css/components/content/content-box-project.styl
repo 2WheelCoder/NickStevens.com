@@ -1,13 +1,24 @@
-.content-box-project
-	background #000
-	align-items center
-	
-	& a
-		padding-bottom 0
+.content-box-project-cue
+	@extend $contentBoxBG
 
-	& img
-		display block
-		align-self center
-		margin 100% auto 0
-		padding-top 100%
-		width 50%
+	background-color $cueOrange
+	background-image url('../img/cue-logo.png')
+
+.content-box-project-one
+	@extend $contentBoxBG
+
+	background-color $black
+	background-image url('../img/one.jpg')
+
+.content-box-project-hooch
+	@extend $contentBoxBG
+
+	background-color $black
+	background-image url('../img/hooch.png')
+	background-size 55% auto
+
+	&:hover
+		background-size 60% auto
+	
+	&.no-hover:hover
+		background-size 55% auto
