@@ -2,13 +2,11 @@
 	background $white
 
 	@media $screen-sm-min
-		box-shadow 0 pxToRem(20) pxToRem(60) rgba(0,0,0,0.1)
+		box-shadow 0 20px 60px rgba(0,0,0,0.1)
 
-	&.compact
-		@media $screen-md-min
-			& .header-logo
-				font-size 2.7rem
-				padding-bottom 0.2rem
+	@media $screen-md-min
+		height pxToRem(96)
+		transition height .3s ease
 
 .header-primary
 	box-shadow 0 pxToRem(20) pxToRem(60) rgba(0,0,0,0.1)
@@ -37,7 +35,7 @@
 		font-size 3.9rem
 		text-align center
 
-		transition font-size 0.3s ease
+		transition font-size 0.3s ease, padding-bottom 0.3s ease
 
 		@media $screen-sm-min
 			display block

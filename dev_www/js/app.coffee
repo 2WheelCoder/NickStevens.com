@@ -28,12 +28,9 @@ class App
 		if @$window.width() >= 769
 			@$window.on 'scroll touchmove', ->
 				if self.$window.scrollTop() > 0
-					self.$headerWrapper.addClass('compact')
-					self.$body.css 'padding-top', '4rem'
+					self.$body.addClass('compact')
 				else
-					self.$headerWrapper.removeClass('compact')
-					self.$body.css 'padding-top', '6rem'
-					
+					self.$body.removeClass('compact')
 
 		if @$window.width() < 481
 			$('#header-menu-btn').click ->
