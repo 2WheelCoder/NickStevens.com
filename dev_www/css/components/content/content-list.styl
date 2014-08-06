@@ -1,6 +1,5 @@
 .content-list
 	clear none
-	// column(1/1)
 	margin-bottom 4rem
 
 	@media $screen-sm-min
@@ -14,8 +13,9 @@
 		position relative
 
 		&:before
+			@extend .icon-slashes:before
+
 			color $blue
-			content "\e604"
 			font-family 'icons'
 			font-size .7rem
 			left 0

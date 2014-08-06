@@ -1,0 +1,39 @@
+.expanded
+	&.content-box
+		column(1/1, gutter: 0)
+		height auto
+		padding-bottom 0
+
+		& h3
+			@extend $headingLeftSlashes
+			margin-bottom $smallSpace
+
+		& h4
+			color $blue
+			font-size 1.1rem
+			margin $mediumSpace 0 $smallSpace
+
+		& h4:first-child
+			margin-top 0
+
+		& p
+			color $grey
+			line-height 1.4
+
+		& a
+			color $blue
+
+		@media $screen-md-min
+			column(2/3, gutter: 0)
+			float right
+		
+		& .stagger
+			column(3/4, gutter: 0)
+			float right
+			margin-bottom 4rem
+
+	&.content-box-cue
+		@media $screen-lg-min
+			height 0
+			// padding-bottom 100*(9/3) %
+			padding-bottom 300.1%
