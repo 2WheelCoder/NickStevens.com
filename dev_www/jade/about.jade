@@ -1,4 +1,4 @@
-include ../includes/header
+include includes/header
 
 script
 	:coffee
@@ -7,122 +7,126 @@ script
 
 ul#primary-content.content
 	li.content-box-headline
-		h2 Project: Cue
+		h2 About
 
-	li.content-box-project.content-box-project-cue.no-hover
+	li.content-box-portrait
 
 	li.content-box-description
-		p Meet new people nearby.
+		p Nick Stevens
 
-	li.content-box.content-box-cue.expanded
+	li.content-box.content-box-about.expanded
 		.content-main
 			.content-block
-				h3 Overview
+				h3 Summary
 
-				img.content-block-image(src="/img/boulder-theater-2.jpg")
+				p I&rsquo;m a User Interface Developer and User Experience Designer dedicated to building products that inspire focus, progress and meaning in user&rsquo;s lives. In the last five years, I&rsquo;ve worked in fast-paced startup and campaign environments creating teams, strategies and tools to solve a diverse range of problems.
 
-				p Cue is a social app that introduces you to new people nearby. It connects you to people within roughly 150 feet of your current location who share tags you type into the app. These tags can be interests such as hiking or cooking, or any word you want.
+			h3 Skills
 
-				p Cue was conceived during Startup Semester at BDW by Adam Noffsinger, Tory Rebhun and myself. In April 2014, the concept won second place in the CU New Venture Challenge Mobile Track. That next month, it was announced to the public at BDW&rsquo;s RE:VEAL event on May 1st, 2014. After several iterations of research, design and prototyping, Cue is currently in development and is expected to launch by the end of 2014.
-
-
-			.content-block
-				h3 Role
-
-				p My primary role at Cue is Technical Director. I handle all feasibility research and coding. Because of its reliance on Bluetooth Low Energy, a relatively new technology, Cue required a great deal of research and prototyping of Bluetooth functionality. In the process of building several prototypes that leveraged both Bluetooth Central and Peripheral functionality, I created the first and only Phonegap plugin that manages Bluetooth Peripherals for iOS. I have made it available as an 
-						a(href="https://github.com/2WheelCoder/ble-peripheral-manager", target="_blank") open-source project on Github
-						|.
-
-				p As a small startup team, I am also involved on a daily basis in user experience design, business development and branding for the app.
-
-				h4 Process
-
-				p My favorite aspect of building a startup is having control over work process and the flexibility to change it when it's not working. As a small startup team, Cue collaborates, iterates and ideates often. Each team member is responsible for a specific area &mdash; I am tech lead &mdash; but all team members contribute to all areas of the product. For example, though I am not in charge of user experience, I contributed the original concept for the app and continue to sketch UIs, design user flows, conduct user interviews and advocate for user&rsquo;s needs. Because our team was all trained in the same skillsets (UX, visual design, front end code) during semester one at BDW, we can assist any team member with any task.
-				
 			.content-lists
 				.content-list
-					h4 Responsibilities
+					h4 Languages
 					ul
-						li Client and server-side development: HTML, CSS and JavaScript
-						li Phonegap Plugin development: Objective-C, XML and JavaScript
-						li Technology feasibility research
-						li UI sketching
-						li User flows
-						li Technical and design prototyping
-						li Company vision: messaging, business model and adoption strategy
-						li Managed all company finances
-						li Developed user research method
-						li User interviews
+						li HTML/Jade
+						li CSS/Stylus/SASS
+						li JavaScript/Node.js/CoffeeScript
+						li PHP
+						li Objective-C
+						li Arduino
 
 				.content-list
-					h4 Technologies
+					h4 Tools
 					ul
-						li iOS
-						li Phonegap/Cordova
+						li Gulp/Grunt build scripts
 						li Backbone.js
-						li Parse.com
-						li Bluetooth LE Phonegap Plugin
-						li BLE Peripheral Manager Phonegap Plugin
-						li Flinto
+						li Phonegap
+						li Git
+						li Browserify
+						li Adobe Creative Suite: Illustrator, Photoshop, Lightroom, Indesign
+
+				.content-list
+					h4 Research
+					ul
+						li user and stakeholder interviews
+						li card sorting
+						li personas
+						li usability testing
+						li content audit
+
+				.content-list
+					h4 Design
+					ul
+						li user flows
+						li wireframing
+						li site maps
+						li content strategy
+
+				.content-list
+					h4 Other Skills
+					ul
+						li public speaking
+						li client management
+						li team building
+						li editorial, event and product photography
+						li sound production and engineering
+
 
 			.content-block
-				h3 Outcome
-
-				p Cue is constantly evolving and we are still building the beta version of the app, but we&rsquo;ve managed to create a strong foundation for the company in the following areas:
-
+				h3 Experience
+				
+				h4 Cue, Co-Founder and Tech Director
 				ul
-					li adoption strategy
-					li business strategy
-					li app development (in progress)
-					li UI Design
+					li Collaborated to develop company vision including target audience, messaging, adoption strategy and business plan
+					li Managed all technical development
+					li Collaborated on user experience research and design
+					li Developed numerous prototypes to test Bluetooth Low Energy feasibility
+					li Developed Bluetooth Low Energy Phonegap plugin for Peripheral advertising
 
-			.deliverables
-				h4 Deliverables
+				a.btn-cta.full-width(href="#") View Project: Cue
 
+				h4 Human Design, Full-Stack JavaScript Developer
 				ul
-					li.deliverables-cue-screenshot
-						a(href="http://cueapp.co", target="_blank")
-							h5 Cue Landing Page
-					li.deliverables-github
-						a(href="https://github.com/2WheelCoder/ble-peripheral-manager", target="_blank")
-							h5 BLE Peripheral Manager Plugin
-					li.deliverables-cue-userflow
-						a(href="/documents/cue-userflow.pdf", target="_blank")
-							h5 User Flow
-					li.deliverables-cue-architecture
-						a(href="/documents/cue-architecture.pdf", target="_blank")
-							h5 Application Architecture
-					//- li
-					//- 	a(href="#", target="_blank")
-					//- 		h5 Personas
-					//- li
-					//- 	a(href="#", target="_blank")
-					//- 		h5 User Research
+					li Managed UI development of HealthySkoop.com
+					li Decreased development time by working with design team to identify user experience issues prior to development
+					li Increased speed of Node.js build scripts eightfold by recoding Grunt process to use Gulp
+					li Increased organization of JavaScript by implementing Browserify dependency management
+					li Increased organization of CSS by implementing a semantic and modularity structure
 
-			.content-block
-				h3 History
-
-				p For BDW&rsquo;s Startup Semester, our team was chosen by faculty to work together to build a startup. We assessed the strengths of our team and began looking at industries and verticals that fit our experience and interests.
-
-				//- Team Picture
-				img.content-block-image(src="/img/boulder-theater-1.jpg")
-
-				p Cue began as a retail app leveraging Bluetooth Low Energy technology to create a more personalized shopping experience for  consumers. Though the idea was a strong one, two months in we discovered an even greater opportunity to leverage Bluetooth Low Energy technology. We pivoted to focus the app on meeting new people nearby who share interests.
-
-				p Today, Cue is developing at a steady pace and is scheduled to launch by the end of 2014.
-
-				h4 Team
-
+				h4 Simply Semantic, Founder, Developer and Designer
 				ul
-					li 
-						a(href="http://noff.me", target="_blank") Adam Noffsinger
-						|, Design Lead
-					li 
-						a(href="http://www.tory.is", target="_blank") Tory Rebhun
-						|, UX Lead
-					li Nick Stevens, Tech Lead
+					li Built and managed relationships with more than 10 clients including agencies such as The 1st Movement, On Board Experiential Marketing and Wigwam Creative
+					li Utilized JavaScript, PHP, HTML, CSS and WordPress to build websites for brands such as Nike and DaVita Healthcare
+					li Delivered projects on schedule and at or below budget
 
-		include ../includes/projects-nav
+				h4 The Hooch Life, Web Manager and Photographer
+				ul
+					li Developed websites for The Hooch Life and Shift 1 Design
+					li Collaborated with Art Director to define the brand&rsquo;s image
+					li Shot and edited hundreds of images on a fast-paced editorial schedule
+
+				a.btn-cta.full-width(href="#") View Project: The Hooch Life
+
+				h4 The ONE Campaign, Colorado State Organizer
+				ul
+					li Built and maintained relationships with US Senate candidates and their staff
+					li Recruited and trained nearly 100 volunteers who engaged US Senate candidates 30 times and signed up 1,000 new members
+					li Secured support from both candidates in the US Senate race
+					li Organized eight events to build awareness, recruit members and train volunteers
+					li Landed six media mentions in Colorado news outlets
+
+				a.btn-cta.full-width(href="#") View Project: ONE
+
+				h4 The ONE Campaign, Intern
+				ul
+					li Founded and led ONE Webster
+					li Recruited and supported ONE leaders on campuses throughout the Midwest
+					li Built a team to enlist more than 300 students in the ONE Campaign at Webster University
+					li Secured support from US Senators Claire McCaskill and Kit Bond
+					li Earned top 10 in the ONE Campus Challenge in 2008 and 2009 among hundreds of universities nationwide
+
+				a.btn-cta.full-width(href="#") View Project: ONE
+
+		include includes/projects-nav
 
 		li.content-box-nav.nav-process
 			a(href="/projects")
@@ -205,7 +209,7 @@ ul#primary-content.content
 				article
 					h2 Kim Smith, Deputy Field Director
 					h3 The ONE Campaign
-					p He was always amazingly dedicated, hard working and detail oriented and I never once was concerned he wouldn&rsquo;t come through fully with what he promised to do.
+					p He was always amazingly dedicated, hard working and detail oriented and I never once was concerned he wouldn&#39;t come through fully with what he promised to do.
 
 		li.content-box-portfolio-image.content-box-portfolio-image-3
 			a(href="http://500px.com/photo/49577346/l'ethno-dj-by-nick-stevens", target="_blank")
@@ -236,7 +240,7 @@ ul#primary-content.content
 			a(href="https://twitter.com/NicholasStevens/status/386282150305091584", target="_blank")
 				.icon.icon-twitter
 				.content-box-tweet-content
-					p Prototypin&rsquo; @bdwcu
+					p Prototypin&#39; @bdwcu
 
 		li.content-box-portfolio-image.content-box-portfolio-image-5
 			a(href="http://500px.com/photo/49578822/rue-des-deux-ponts-by-nick-stevens", target="_blank")
@@ -272,4 +276,4 @@ ul#primary-content.content
 
 ul#secondary-content.content
 
-include ../includes/footer
+include includes/footer

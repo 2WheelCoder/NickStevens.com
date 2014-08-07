@@ -63,18 +63,14 @@ gulp.task 'templates', ->
 	.pipe refresh(lrserver)	
 
 gulp.task 'images', ->
-	return gulp.src 'dev_www/img/**/*.{png,jpg,jpeg,gif,svg}'
-		.pipe plumber()
-		.pipe changed 'dev_www/img/**/*.{png,jpg,jpeg,gif,svg}'
-		.pipe imagemin()
+	return gulp.src 'dev_www/img/**/*'
+		# .pipe changed 'dev_www/img/**/*'
 		.pipe gulp.dest 'local_www/img/'
-		# .pipe gulp.dest 'build_www/img/'
 		.pipe refresh(lrserver)
 
 gulp.task 'documents', ->
 	return gulp.src 'dev_www/documents/**/*'
 		.pipe gulp.dest 'local_www/documents/'
-		# .pipe gulp.dest 'build_www/documents/'
 
 gulp.task 'icons', ->
 	return gulp.src 'dev_www/icons/**/*.svg'
@@ -111,7 +107,8 @@ gulp.task 'build', ->
 	gulp.src 'local_www/documents/**/*'
 		.pipe gulp.dest 'build_www/documents'
 
-	gulp.src 'local_www/img/**/*.{png,jpg,jpeg,gif,svg}'
+	gulp.src 'dev_www/img/**/*'
+		.pipe imagemin()
 		.pipe gulp.dest 'build_www/img/'
 
 gulp.task 'default', ['scripts', 'css', 'serve'], ->

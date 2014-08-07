@@ -66,29 +66,37 @@
 			opacity 0
 			top 0
 
-	& .cue-userflow
-		background $blue url('../img/userflow.png')
+	& .deliverables-cue-userflow
+		background $blue url('../img/deliverables/cue/userflow.png')
 		background-size contain
 
-	& .cue-architecture
-		background $blue url('../img/architecture.png')
+	& .deliverables-cue-architecture
+		background $blue url('../img/deliverables/cue/architecture.png')
 		background-size contain
 
-	& .cue-screenshot
-		background $blue url('../img/cue-screenshot-home.png') no-repeat
+	& .deliverables-cue-screenshot
+		background $blue url('../img/deliverables/cue/cue-screenshot-home.png') no-repeat
 		background-size contain
 
-	& .github
+	& .deliverables-github
 		background $cueOrange
 		position relative
 
 		&:after
 			@extend $icon
+			@extend .icon-github:before
 
 			color $white
-			content "\e603"
 			font-size 4rem
 			position absolute
 			text-align center
 			top 1rem
 			width 100%
+
+	& .deliverables-hooch-photos
+		background transparent url('../img/deliverables/hooch/hooch-bottle.jpg') no-repeat
+		background-size cover
+
+	& .deliverables-hooch-site
+		background transparent url('../img/deliverables/hooch/hooch-bottle.jpg') no-repeat
+		background-size cover

@@ -16,12 +16,17 @@
 		& h4:first-child
 			margin-top 0
 
+		& h3 + h4
+			margin-top 0
+
 		& p
 			color $grey
 			line-height 1.4
-
-		& a
-			color $blue
+		
+		& p,
+		& ul
+			& a
+				color $blue
 
 		@media $screen-md-min
 			column(2/3, gutter: 0)
@@ -37,3 +42,23 @@
 			height 0
 			// padding-bottom 100*(9/3) %
 			padding-bottom 300.1%
+
+	&.content-box-hooch
+		@media $screen-lg-min
+			height 0
+			padding-bottom 100*(7/3) %
+			// padding-bottom 266.72%
+			padding-bottom 233.4%
+
+	&.content-box-about
+		@media $screen-lg-min
+			height 0
+			padding-bottom 100*(10/3) %
+			// padding-bottom 266.72%
+			// padding-bottom 233.4%
+
+	&.content-box-one
+		@media $screen-lg-min
+			height 0
+			padding-bottom 100*(8/3) %
+			padding-bottom 266.72%

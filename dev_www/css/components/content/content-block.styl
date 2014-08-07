@@ -1,13 +1,19 @@
 .content-block
 	@extend $clearfix
 	clear both
-	margin-bottom $mediumSpace
+	margin $mediumSpace 0
+
+	&:first-child
+		margin-top 0
 
 	& .content-block-image
 		column(2/5, gutter: 0)
 		float right
 		margin-bottom $smallSpace
 		margin-left $smallSpace
+
+	& ul
+		margin-bottom $smallSpace
 
 	& li
 		color $grey
@@ -18,16 +24,18 @@
 		position relative
 
 		&:before
+			@extend $icon
+			@extend .icon-slashes:before
+
 			color $blue
-			content "\e00A"
-			font-family 'icons'
 			font-size .7rem
 			left 0
 			padding-top .25rem
 			position absolute
-			speak none
-			font-weight normal
-			font-variant normal
-			text-transform none
-			line-height 1
-			-webkit-font-smoothing antialiased
+
+		& ul
+			margin-top $smallSpace
+
+	& p
+		&:last-child
+			margin-bottom 0

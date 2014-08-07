@@ -1,6 +1,11 @@
+.content-lists
+	@extend $clearfix
+
+	& .content-list:nth-child(1n+3)
+		margin-top $smallSpace
+
 .content-list
 	clear none
-	margin-bottom 4rem
 
 	@media $screen-sm-min
 		column(1/2, cycle: 2)
@@ -27,3 +32,6 @@
 			text-transform none
 			line-height 1
 			-webkit-font-smoothing antialiased
+
+		& ul
+			margin-top $smallSpace
