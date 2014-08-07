@@ -19,6 +19,7 @@ express = require 'express'
 livereload = require 'connect-livereload'
 livereloadport = 35729
 serverport = 3000
+marked = require 'marked'
  
 # We only configure the server here and start it only when running the watch task
 server = express()
