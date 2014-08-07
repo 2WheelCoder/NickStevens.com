@@ -52,6 +52,9 @@
 			color $grey
 			line-height 1.4
 
+			& + h3
+				margin-top $mediumSpace
+
 			& a
 				&:hover
 					text-decoration overline
@@ -88,6 +91,12 @@
 			padding-bottom 100*(7/3) %
 			// padding-bottom 266.72%
 			padding-bottom 233.4%
+
+	&.content-box-process
+		@media $screen-lg-min
+			height 0
+			padding-bottom 100*(6/3) %
+			// padding-bottom 266.72%
 
 	&.content-box-one
 		@media $screen-lg-min

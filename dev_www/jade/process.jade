@@ -14,117 +14,37 @@ ul#primary-content.content
 	li.content-box-headline.content-box-headline-tagline
 		h2 research<br />&mdash;<br />design<br />&mdash;<br />build
 
-	li.content-box.content-box-about.expanded
+	li.content-box.content-box-process.expanded
 		.content-main
 			.content-block
-				h3 Summary
+				:markdown
+					### Process
 
-				p I&rsquo;m a User Interface Developer and User Experience Designer dedicated to building products that inspire focus, progress and meaning in user&rsquo;s lives. In the last five years, I&rsquo;ve worked in fast-paced startup and campaign environments creating teams, strategies and tools to solve a diverse range of problems.
+					I believe that technology can enable more focused, productive and meaningful lives. But in our societal struggle to leverage the benefits of technology, we've become trapped by the distraction and dependence of an unhealthy relationship with it. I research, design and build products that return focus, productivity and meaning to user's lives.
 
-			h3 Skills
+					For example, imagine you are an energy company that provides a service that reduces energy use and cost. The business question "how do I create something that customers will pay for?" can be answered by envisioning what a healthy relationship with your digital product looks like. Through research I might determine, for example, that a healthy relationship with technology is one that does not distract from their daily activities (focus), saves them time and money (productivity) and impacts what they value in a positive way (meaning).
 
-			.content-lists
-				.content-list
-					h4 Languages
-					ul
-						li HTML/Jade
-						li CSS/Stylus/SASS
-						li JavaScript/Node.js/CoffeeScript
-						li PHP
-						li Objective-C
-						li Arduino
+					Therefore, the tool that I build for this audience could involve a mobile app that can be accessed in their free time that ties the contribution of their time directly to their cost savings. In addition, it could give feedback about the user's environmental impact and allow them to compare this to their friends and family members.
 
-				.content-list
-					h4 Tools
-					ul
-						li Gulp/Grunt build scripts
-						li Backbone.js
-						li Phonegap
-						li Git
-						li Browserify
-						li Adobe Creative Suite: Illustrator, Photoshop, Lightroom, Indesign
+					### Stages
+					The previous scenario is a simple example of how I might approach a user experience challenge. In an ideal project, there are four stages that take place: research, design, build and test. How and when these stages happen varies with each project. They are meant to be malleable to fit the needs of each project. Iteration is essential to creating the best user experience, so stages are often repeated later in a project until a solution is reached.
 
-				.content-list
-					h4 Research
-					ul
-						li user and stakeholder interviews
-						li card sorting
-						li personas
-						li usability testing
-						li content audit
+					- research
+					- design
+					- build
+					- test
 
-				.content-list
-					h4 Design
-					ul
-						li user flows
-						li wireframing
-						li site maps
-						li content strategy
+					#### Research
+					Research is essential to designing solutions that meet the needs of the business and the user. The goal of this phase is to uncover actionable insights about a user that can guide the design phase. Secondary research is great for gaining an understanding of the industry or environment, but the most fruitful insights come from primary research. Interviewing stakeholders and current or potential users can reveal a great deal about the requirements or constraints of the final solution.
 
-				.content-list
-					h4 Other Skills
-					ul
-						li public speaking
-						li client management
-						li team building
-						li editorial, event and product photography
-						li sound production and engineering
+					#### Design
+					Sketching is the most important exercise during the design phase. It is a highly iterative process. I begin by sketching ideas of the overall experience: bullet points, word clouds, systems diagrams, user flows. The focus here is on quantity of ideas, not quality. Just by getting the pencil to paper the solution begins to unfold. Eventually, the sketches evolve into interfaces. This is a good stage to get feedback from other designers. Then, depending on the project I may move to wireframes and clickable prototypes which can be shown to clients, tested with users or handed over to a visual designer.
 
+					#### Build
+					Depending on the needs of the project the first build may be a clickable prototype of wireframes using a tool such as {Flinto} or {Invision}. However, because of my background as a developer I prefer to jump to code as quickly as possible. Occasionally, I build a quick prototype with {Bootstrap}, but if a visual designer has already mocked up styling for the interface I will create my own system of custom tools and pre-built tools from {npm}. Everything I code is modular and semantic so that it can be reused and easily understood by other developers.
 
-			.content-block
-				h3 Experience
-				
-				h4 Cue, Co-Founder and Tech Director
-				ul
-					li Collaborated to develop company vision including target audience, messaging, adoption strategy and business plan
-					li Managed all technical development
-					li Collaborated on user experience research and design
-					li Developed numerous prototypes to test Bluetooth Low Energy feasibility
-					li Developed Bluetooth Low Energy Phonegap plugin for Peripheral advertising
-
-				a.btn-cta.full-width(href="#") View Project: Cue
-
-				h4 Human Design, Full-Stack JavaScript Developer
-				ul
-					li Managed UI development of HealthySkoop.com
-					li Decreased development time by working with design team to identify user experience issues prior to development
-					li Increased speed of Node.js build scripts eightfold by recoding Grunt process to use Gulp
-					li Increased organization of JavaScript by implementing Browserify dependency management
-					li Increased organization of CSS by implementing a semantic and modularity structure
-
-				h4 Simply Semantic, Founder, Developer and Designer
-				ul
-					li Built and managed relationships with more than 10 clients including agencies such as The 1st Movement, On Board Experiential Marketing and Wigwam Creative
-					li Utilized JavaScript, PHP, HTML, CSS and WordPress to build websites for brands such as Nike and DaVita Healthcare
-					li Delivered projects on schedule and at or below budget
-
-				h4 The Hooch Life, Web Manager and Photographer
-				ul
-					li Developed websites for The Hooch Life and Shift 1 Design
-					li Collaborated with Art Director to define the brand&rsquo;s image
-					li Shot and edited hundreds of images on a fast-paced editorial schedule
-
-				a.btn-cta.full-width(href="#") View Project: The Hooch Life
-
-				h4 The ONE Campaign, Colorado State Organizer
-				ul
-					li Built and maintained relationships with US Senate candidates and their staff
-					li Recruited and trained nearly 100 volunteers who engaged US Senate candidates 30 times and signed up 1,000 new members
-					li Secured support from both candidates in the US Senate race
-					li Organized eight events to build awareness, recruit members and train volunteers
-					li Landed six media mentions in Colorado news outlets
-
-				a.btn-cta.full-width(href="#") View Project: ONE
-
-				h4 The ONE Campaign, Intern
-				ul
-					li Founded and led ONE Webster
-					li Recruited and supported ONE leaders on campuses throughout the Midwest
-					li Built a team to enlist more than 300 students in the ONE Campaign at Webster University
-					li Secured support from US Senators Claire McCaskill and Kit Bond
-					li Earned top 10 in the ONE Campus Challenge in 2008 and 2009 among hundreds of universities nationwide
-
-				a.btn-cta.full-width(href="#") View Project: ONE
+					#### Test
+					The purpose of this stage is to conduct usability testing with actual users in order to determine how successfully the product of the last stage fulfills the needs uncovered in the research phase. If usability testing indicates that users can easily complete necessary tasks in the app, then the app is ready for release into a real world environment where we can test how successfully the app makes users' lives more focused, productive and meaningful. When barriers to a more focused, productive and meaningful life are revealed then I return to the research, design or build phase to determine what should be changed.
 
 		include includes/projects-nav
 
