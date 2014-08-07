@@ -10,14 +10,14 @@ class App
 		@$body = $('body')
 		@attachEvents()
 
-		if window.siteSettings? and window.siteSettings.page is 'project'
-			if @$window.width() < 1025
-				$('#primary-content')
-					.children('.content-box-project')
-					.last()
-					.nextAll()
-					.remove()
-					.appendTo('#secondary-content')
+		if window.siteSettings? and (window.siteSettings.page is 'project' or window.siteSettings.page is 'about' or window.siteSettings.page is 'process') and @$window.width() < 1025
+			
+			$('#primary-content')
+				.children('.content-box-project')
+				.last()
+				.nextAll()
+				.remove()
+				.appendTo('#secondary-content')
 
 		if window.siteSettings? and window.siteSettings.page is 'contact'
 			new Contact()

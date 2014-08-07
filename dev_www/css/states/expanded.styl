@@ -11,7 +11,33 @@
 		& h4
 			color $blue
 			font-size 1.1rem
-			margin $mediumSpace 0 $smallSpace
+			margin $mediumSpace 0 0
+			text-transform 
+
+			& + p,
+			& + div,
+			& + ul
+				margin-top .4rem
+
+			& span
+				@extend $slashBefore
+				font-size .9rem
+				font-weight lighter
+				margin-left .5rem
+
+				&:before
+					color $grey
+					font-size .65rem
+					margin-right .4rem
+					position static
+
+		& h5
+			color $grey
+			font-size 1rem
+
+			& + p
+				font-size .9rem
+				margin-top -1.7rem
 
 		& h4:first-child
 			margin-top 0
@@ -19,9 +45,16 @@
 		& h3 + h4
 			margin-top 0
 
+		& h5 + h4
+			margin-top $smallSpace
+
 		& p
 			color $grey
 			line-height 1.4
+
+			& a
+				&:hover
+					text-decoration overline
 		
 		& p,
 		& ul
@@ -37,6 +70,12 @@
 			float right
 			margin-bottom 4rem
 
+	&.content-box-about
+		@media $screen-lg-min
+			height 0
+			padding-bottom 100*(14/3) %
+			padding-bottom 466.95%
+
 	&.content-box-cue
 		@media $screen-lg-min
 			height 0
@@ -49,13 +88,6 @@
 			padding-bottom 100*(7/3) %
 			// padding-bottom 266.72%
 			padding-bottom 233.4%
-
-	&.content-box-about
-		@media $screen-lg-min
-			height 0
-			padding-bottom 100*(10/3) %
-			// padding-bottom 266.72%
-			// padding-bottom 233.4%
 
 	&.content-box-one
 		@media $screen-lg-min
