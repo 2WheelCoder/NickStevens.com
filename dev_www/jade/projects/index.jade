@@ -1,0 +1,35 @@
+include ../includes/header
+
+script
+	:coffee
+		window.siteSettings = window.siteSettings || {}
+		window.siteSettings.page = 'process'
+
+ul#primary-content.content
+	li.content-box-project.content-box-project-cue
+		a(href="/projects/cue")
+
+	li.content-box-project.content-box-project-hooch
+		a(href="projects/hooch")
+
+	li.content-box-project.content-box-project-one
+		a(href="projects/one")
+
+	li.content-box-nav.nav-process
+		a(href="/projects")
+			.icon.icon-process
+			h3 process
+
+	li.content-box-nav.nav-about
+		a(href="#")
+			.icon.icon-info
+			h3 about
+
+	li.content-box-nav.nav-contact
+		a(href="#")
+			.icon.icon-mail
+			h3 contact
+
+ul#secondary-content.content
+
+include ../includes/footer
