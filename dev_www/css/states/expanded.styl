@@ -8,6 +8,9 @@
 			@extend $headingLeftSlashes
 			margin-bottom $smallSpace
 
+			@media $screen-sm-min
+				margin-left -1.48rem
+
 		& h4
 			color $blue
 			font-size 1.1rem
@@ -84,6 +87,10 @@
 			height 0
 			padding-bottom 100*(3/3) %
 			// padding-bottom 266.72%
+
+		& h3
+			width 20rem
+			margin 0 auto
 
 	&.content-box-cue
 		@media $screen-lg-min
