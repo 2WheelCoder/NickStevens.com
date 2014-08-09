@@ -10,7 +10,7 @@ class App
 		@$body = $('body')
 		@attachEvents()
 
-		if window.siteSettings? and (window.siteSettings.page is 'project' or window.siteSettings.page is 'about' or window.siteSettings.page is 'process') and @$window.width() < 1025
+		if window.siteSettings? and (window.siteSettings.page is 'project' or window.siteSettings.page is 'about' or window.siteSettings.page is 'process' or window.siteSettings.page is 'vision') and @$window.width() < 1025
 			
 			$('#primary-content')
 				.children('.content-box-project')
