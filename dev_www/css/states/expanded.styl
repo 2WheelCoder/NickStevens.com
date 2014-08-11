@@ -76,6 +76,10 @@
 			float right
 			margin-bottom 4rem
 
+	&.content-box-hooch
+		@media (min-width: 948px)
+			min-height pxToRem(2976)
+
 	// &.content-box-about
 	// 	@media $screen-lg-min
 	// 		height 0
@@ -99,10 +103,13 @@
 	// 		padding-bottom 100*(9/3) %
 	// 		padding-bottom 300.1%
 
-	&.content-box-hooch
-		@media $screen-md-min
-			height 0
-			padding-bottom 100*(9/3) %
+	// &.content-box-hooch
+	// 	@media (min-width: 948)
+	// 		min-height pxToRem(2976)
+
+		// @media $screen-md-min
+	// 		height 0
+	// 		padding-bottom 100*(9/3) %
 			// padding-bottom 266.72%
 			// padding-bottom 233.4%
 			// min-height pxToRem(2616)
