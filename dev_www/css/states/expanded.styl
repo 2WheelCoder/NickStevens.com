@@ -82,11 +82,12 @@
 	// 		padding-bottom 100*(15/3) %
 	// 		padding-bottom 500.29%
 
-	// &.content-box-contact
-	// 	@media $screen-lg-min
-	// 		height 0
-	// 		padding-bottom 100*(3/3) %
-	// 		// padding-bottom 266.72%
+	&.content-box-contact
+		height 0
+		min-height pxToRem(603)
+		padding-bottom 100*(3/3) %
+		// @media $screen-lg-min
+		// padding-bottom 266.72%
 
 	// 	& h3
 	// 		width 20rem
@@ -98,12 +99,13 @@
 	// 		padding-bottom 100*(9/3) %
 	// 		padding-bottom 300.1%
 
-	// &.content-box-hooch
-	// 	@media $screen-lg-min
-	// 		height 0
-	// 		padding-bottom 100*(7/3) %
-	// 		// padding-bottom 266.72%
-	// 		padding-bottom 233.4%
+	&.content-box-hooch
+		@media $screen-md-min
+			height 0
+			padding-bottom 100*(9/3) %
+			// padding-bottom 266.72%
+			// padding-bottom 233.4%
+			// min-height pxToRem(2616)
 
 	// &.content-box-process
 	// 	@media $screen-lg-min

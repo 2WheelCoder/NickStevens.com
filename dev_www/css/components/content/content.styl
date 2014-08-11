@@ -23,15 +23,16 @@
 	& li img
 		max-width 100%
 
-	& > li:nth-child(3)
-		@media $screen-sm-min
-			display none
-
-		@media $screen-md-min
-			display flex
-
 .content-interior
 	& .headline
 		& h2
 			text-align center
 			width 100%
+
+.content-primary
+	& > li:nth-child(2)
+		@media $screen-sm-min
+			display none
+
+		@media $screen-md-min
+			display flex

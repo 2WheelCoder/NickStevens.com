@@ -5,7 +5,7 @@ script
 		window.siteSettings = window.siteSettings || {}
 		window.siteSettings.page = 'contact'
 
-ul.content
+ul#primary-content.content
 	li.content-box.content-box-contact.expanded
 		.content-main
 			.content-block
@@ -34,6 +34,8 @@ ul.content
 	
 	include includes/main-nav
 
+ul#secondary-content.content
+	
 script(src="http://www.parsecdn.com/js/parse-1.2.16.min.js")
 
 include includes/footer
