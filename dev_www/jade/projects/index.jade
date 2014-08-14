@@ -5,20 +5,51 @@ script
 		window.siteSettings = window.siteSettings || {}
 		window.siteSettings.page = 'projects'
 
-ul#primary-content.content.content-primary
+ul.content.content-primary
 	li.content-box-project.content-box-project-cue
-		a(href="/projects/cue")
+		a(href="/projects/cue.html")
 
 	li.content-box-project.content-box-project-hooch
-		a(href="projects/hooch")
+		a(href="/projects/the-hooch-life.html")
 
 	li.content-box-project.content-box-project-one
-		a(href="projects/one")
+		a(href="/projects/one-campaign.html")
 
-	include ../includes/main-nav
+	li.content-box-nav.nav-vision
+		a(href="/vision.html")
+			.icon.icon-vision
+			h3 vision
 
-	//- include ../includes/content-boxes
+	li.content-box-nav.nav-process
+		a(href="/process.html")
+			.icon.icon-process
+			h3 process
 
-ul#secondary-content.content
+	//- li.content-box-nav.nav-projects
+	//- 	a(href="/projects")
+	//- 		.icon.icon-hammer
+	//- 		h3 projects
+
+	li.content-box-nav.nav-about
+		a(href="/about.html")
+			.icon.icon-question
+			h3 about
+
+	li.content-box-portfolio-image.content-box-portfolio-image-12
+		a(href="http://500px.com/photo/49579746/josh-harvey-gungor-by-nick-stevens", target="_blank")
+			.icon.icon-500px
+
+	li.content-box-nav.nav-contact
+		a(href="/contact.html")
+			.icon.icon-mail
+			h3 contact
+
+	li.content-box-portfolio-image.content-box-portfolio-image-17
+		a(href="http://500px.com/photo/75207217/zeebo-w-see-i-by-nick-stevens", target="_blank")
+			.icon.icon-500px
+
+	include ../includes/content-boxes
+
+//- ul#secondary-content.content
 
 include ../includes/footer
