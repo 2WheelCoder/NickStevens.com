@@ -75,3 +75,6 @@ $RECYCLE.BIN/
 
 local_www/
 build_www/
+
+###AWS###
+aws.json

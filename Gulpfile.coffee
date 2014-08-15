@@ -17,9 +17,16 @@ refresh = require 'gulp-livereload'
 lrserver = require('tiny-lr')()
 express = require 'express'
 livereload = require 'connect-livereload'
+marked = require 'marked'
+s3 = require 'gulp-s3'
+gzip = require 'gulp-gzip'
+fs = require 'fs'
+
 livereloadport = 35729
 serverport = 3000
-marked = require 'marked'
+options =
+	gzippedOnly : true
+aws = JSON.parse(fs.readFileSync('./aws.json'))
  
 # We only configure the server here and start it only when running the watch task
 server = express()
@@ -31,7 +38,7 @@ server.use livereload({
 server.use(express.static('./local_www'))
 
 gulp.task 'html', ->
-	return gulp.src ['dev_www/jade/**/*.jade', '!dev_www/jade/includes/**/*']
+	gulp.src ['dev_www/jade/**/*.jade', '!dev_www/jade/includes/**/*']
 		.pipe plumber()
 		.pipe jade()
 		.pipe gulp.dest 'local_www/'
@@ -41,7 +48,7 @@ gulp.task 'scripts', ->
 	gulp.src 'dev_www/js/vendor/**/*.js'
 		.pipe gulp.dest 'local_www/js/vendor/'
 
-	return gulp.src 'dev_www/js/app.coffee', { read: false }
+	gulp.src 'dev_www/js/app.coffee', { read: false }
 		.pipe plumber()
 		.pipe browserify { transform: ['coffeeify'], extensions: ['.coffee'] }
 		.pipe rename 'scripts.js'
@@ -49,14 +56,14 @@ gulp.task 'scripts', ->
 		.pipe refresh(lrserver)
 
 gulp.task 'css', ->
-	return gulp.src 'dev_www/css/styles.styl'
+	gulp.src 'dev_www/css/styles.styl'
 		.pipe plumber()
 		.pipe stylus { use : [nib(), jeet()] }
 		.pipe gulp.dest 'local_www/css/'
 		.pipe refresh(lrserver)
 
 gulp.task 'fonts', ->
-	return gulp.src 'dev_www/fonts/**/*'
+	gulp.src 'dev_www/fonts/**/*'
 		.pipe gulp.dest 'local_www/fonts/'
 
 gulp.task 'templates', ->
@@ -64,17 +71,17 @@ gulp.task 'templates', ->
 	.pipe refresh(lrserver)	
 
 gulp.task 'images', ->
-	return gulp.src 'dev_www/img/**/*'
+	gulp.src 'dev_www/img/**/*'
 		# .pipe changed 'dev_www/img/**/*'
 		.pipe gulp.dest 'local_www/img/'
 		.pipe refresh(lrserver)
 
 gulp.task 'documents', ->
-	return gulp.src 'dev_www/documents/**/*'
+	gulp.src 'dev_www/documents/**/*'
 		.pipe gulp.dest 'local_www/documents/'
 
 gulp.task 'icons', ->
-	return gulp.src 'dev_www/icons/**/*.svg'
+	gulp.src 'dev_www/icons/**/*.svg'
 		.pipe iconfont {fontName: 'icons', appendCodepoints: true, normalize: true }
 		.on 'codepoints', (codepoints, options) ->
 	        console.log codepoints, options
@@ -89,14 +96,11 @@ gulp.task 'serve', ->
 
 gulp.task 'build', ->
 	gulp.src 'local_www/js/scripts.js'
-		.pipe plumber()
 		.pipe jsmin()
-		# .pipe rename {suffix: '.min'}
 		.pipe gulp.dest 'build_www/js/'
 		
 	gulp.src 'local_www/css/styles.css'
 		.pipe cssmin()
-		# .pipe rename {suffix: '.min'}
 		.pipe gulp.dest 'build_www/css/'
 
 	gulp.src 'local_www/fonts/**/*'
@@ -111,6 +115,12 @@ gulp.task 'build', ->
 	gulp.src 'dev_www/img/**/*'
 		.pipe imagemin()
 		.pipe gulp.dest 'build_www/img/'
+
+gulp.task 'deploy', ->
+	gulp.src 'build_www/**/*'
+		.pipe gzip()
+		.pipe s3(aws, options)
+
 
 gulp.task 'default', ['scripts', 'css', 'serve'], ->
 	gulp.watch 'dev_www/jade/**/*.jade', ['html']
