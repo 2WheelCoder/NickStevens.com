@@ -26,7 +26,8 @@ class Contact
 			# pass our 'data' object to it
 			Parse.Cloud.run "sendEmail", data, {
 				success: (object) ->
-					$('#response').html('Email sent!').addClass('success').fadeIn('fast')
+					$('#submit').fadeOut ->
+						$('#response').html('Email sent!').addClass('success').fadeIn('fast')
 				,
 				error: (object, error) ->
 					console.log error
