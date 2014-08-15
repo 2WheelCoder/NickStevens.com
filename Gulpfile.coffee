@@ -31,7 +31,7 @@ server.use livereload({
 server.use(express.static('./local_www'))
 
 gulp.task 'html', ->
-	return gulp.src 'dev_www/jade/**/*.jade'
+	return gulp.src ['dev_www/jade/**/*.jade', '!dev_www/jade/includes/**/*']
 		.pipe plumber()
 		.pipe jade()
 		.pipe gulp.dest 'local_www/'
