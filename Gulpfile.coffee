@@ -94,33 +94,39 @@ gulp.task 'serve', ->
 	# Set up your livereload server
 	# lrserver.listen lrport
 
-gulp.task 'build', ->
+gulp.task 'deploy', ->
 	gulp.src 'local_www/js/scripts.js'
 		.pipe jsmin()
-		.pipe gulp.dest 'build_www/js/'
+		.pipe gzip()
+		.pipe gulp.dest 'build_www/js'
+		.pipe s3(aws, options)
 		
 	gulp.src 'local_www/css/styles.css'
 		.pipe cssmin()
-		.pipe gulp.dest 'build_www/css/'
+		.pipe gzip()
+		.pipe gulp.dest 'build_www/css'
+		.pipe s3(aws, options)
 
 	gulp.src 'local_www/fonts/**/*'
-		.pipe gulp.dest 'build_www/fonts/'
+		.pipe gzip()
+		.pipe gulp.dest 'build_www/fonts'
+		.pipe s3(aws, options)
 
 	gulp.src 'local_www/**/*.html'
-		.pipe gulp.dest 'build_www/'
+		.pipe gzip()
+		.pipe gulp.dest 'build_www'
+		.pipe s3(aws, options)
 
 	gulp.src 'local_www/documents/**/*'
+		.pipe gzip()
 		.pipe gulp.dest 'build_www/documents'
+		.pipe s3(aws, options)
 
 	gulp.src 'dev_www/img/**/*'
 		.pipe imagemin()
-		.pipe gulp.dest 'build_www/img/'
-
-gulp.task 'deploy', ->
-	gulp.src 'build_www/**/*'
 		.pipe gzip()
+		.pipe gulp.dest 'build_www/img'
 		.pipe s3(aws, options)
-
 
 gulp.task 'default', ['scripts', 'css', 'serve'], ->
 	gulp.watch 'dev_www/jade/**/*.jade', ['html']
