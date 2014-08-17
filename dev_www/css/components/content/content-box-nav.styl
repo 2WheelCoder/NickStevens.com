@@ -3,13 +3,13 @@
 	text-align center
 
 	&:hover
-		& h3
-			opacity 1
+		& .icon
+			font-size 7rem
 
-	& a
-		& h3
-			@media $screen-md-min
-				opacity 0
+	// & a
+	// 	& h3
+	// 		@media $screen-md-min
+	// 			opacity 0
 
 	& .icon
 		align-self center
@@ -17,6 +17,8 @@
 		padding-top 100%
 		text-align center
 		width 100%
+
+		transition font-size 0.2s ease
 
 	& h3
 		bottom 20%
