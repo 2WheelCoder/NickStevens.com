@@ -13,6 +13,9 @@
 		position static
 		z-index 0
 
+	& h2
+		@extend $visuallyHidden
+
 	& li
 		display block
 		font-size pxToRem(20)
@@ -47,6 +50,9 @@
 			border-bottom 1px solid rgba(0,0,0,0.1)
 			display block
 			padding .75rem 0
+
+			&:hover
+				text-decoration overline
 
 			@media $screen-sm-min
 				border none

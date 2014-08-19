@@ -6,6 +6,81 @@
 	&:first-child
 		margin-top 0
 
+	& h3
+		color $darkGrey
+		font-size 2rem
+		text-align center
+		text-decoration underline
+		text-transform uppercase
+
+	& h4
+		@extend $headingLeftSlashes
+		margin-bottom $smallSpace
+
+	& h5
+		color $blue
+		font-size 1.1rem
+		margin $mediumSpace 0 0
+		text-transform 
+
+		& + p,
+		& + div,
+		& + ul
+			margin-top .4rem
+
+		& span
+			@extend $slashBefore
+			font-size .9rem
+			font-weight lighter
+			margin-left .5rem
+
+			&:before
+				color $grey
+				font-size .65rem
+				margin-right .4rem
+				position static
+
+	& h6
+		color $grey
+		font-size 1rem
+
+		& + p
+			font-size .9rem
+			margin-top -1.7rem
+
+	& h5:first-child
+		margin-top 0
+
+	& h4 + h5
+		margin-top 0
+
+	& h6 + h5
+		margin-top $smallSpace
+
+	& p
+		color $grey
+		line-height 1.4
+
+		&:last-child
+			margin-bottom 0
+
+		& + h4
+			margin-top $mediumSpace
+
+		& a
+			&:hover
+				text-decoration overline
+	
+	& p,
+	& ul
+		& a
+			color $blue
+	
+	& .stagger
+		column(3/4, gutter: 0)
+		float right
+		margin-bottom 4rem
+
 	& .content-block-image
 		column(2/5, gutter: 0)
 		float right
@@ -34,7 +109,3 @@
 
 		& ul
 			margin-top $smallSpace
-
-	& p
-		&:last-child
-			margin-bottom 0

@@ -1,133 +1,26 @@
 .expanded
 	&.content-box
 		column(1/1, gutter: 0)
+		float none
 		height auto
+		max-width pxToRem(700)
+		margin-left auto
+		margin-right auto
 		padding-bottom 0
+		display block
 
-		& h3
-			@extend $headingLeftSlashes
-			margin-bottom $smallSpace
+		&:last-child
+			margin-right auto
 
-			// @media $screen-sm-min
-			// 	margin-left -1.48rem
-
-		& h4
-			color $blue
-			font-size 1.1rem
-			margin $mediumSpace 0 0
-			text-transform 
-
-			& + p,
-			& + div,
-			& + ul
-				margin-top .4rem
-
-			& span
-				@extend $slashBefore
-				font-size .9rem
-				font-weight lighter
-				margin-left .5rem
-
-				&:before
-					color $grey
-					font-size .65rem
-					margin-right .4rem
-					position static
-
-		& h5
-			color $grey
-			font-size 1rem
-
-			& + p
-				font-size .9rem
-				margin-top -1.7rem
-
-		& h4:first-child
-			margin-top 0
-
-		& h3 + h4
-			margin-top 0
-
-		& h5 + h4
-			margin-top $smallSpace
-
-		& p
-			color $grey
-			line-height 1.4
-
-			& + h3
-				margin-top $mediumSpace
-
-			& a
-				&:hover
-					text-decoration overline
-		
-		& p,
-		& ul
-			& a
-				color $blue
-
-		@media $screen-md-min
-			column(2/3, gutter: 0)
-			float right
-		
-		& .stagger
-			column(3/4, gutter: 0)
-			float right
-			margin-bottom 4rem
+		// @media $screen-md-min
+		// 	column(2/3, gutter: 0)
+		// 	float right
 
 	&.content-box-hooch
 		@media (min-width: 948px)
 			min-height pxToRem(2976)
 
-	// &.content-box-about
-	// 	@media $screen-lg-min
-	// 		height 0
-	// 		padding-bottom 100*(15/3) %
-	// 		padding-bottom 500.29%
-
 	&.content-box-contact
 		height 0
 		min-height pxToRem(603)
 		padding-bottom 100*(3/3) %
-		// @media $screen-lg-min
-		// padding-bottom 266.72%
-
-	// 	& h3
-	// 		width 20rem
-	// 		margin 0 auto
-
-	// &.content-box-cue
-	// 	@media $screen-lg-min
-	// 		height 0
-	// 		padding-bottom 100*(9/3) %
-	// 		padding-bottom 300.1%
-
-	// &.content-box-hooch
-	// 	@media (min-width: 948)
-	// 		min-height pxToRem(2976)
-
-		// @media $screen-md-min
-	// 		height 0
-	// 		padding-bottom 100*(9/3) %
-			// padding-bottom 266.72%
-			// padding-bottom 233.4%
-			// min-height pxToRem(2616)
-
-	// &.content-box-process
-	// 	@media $screen-lg-min
-	// 		height 0
-	// 		padding-bottom 100*(4/3) %
-	// 		// padding-bottom 266.72%
-
-	// &.content-box-one
-	// 	@media $screen-lg-min
-	// 		height 0
-	// 		padding-bottom 100*(8/3) %
-	// 		padding-bottom 266.72%
-
-	// &.content-box-vision
-	// 	@media $screen-lg-min
-	// 		height 0
-	// 		padding-bottom 100*(5/3) %
-	// 		// padding-bottom 266.72%
