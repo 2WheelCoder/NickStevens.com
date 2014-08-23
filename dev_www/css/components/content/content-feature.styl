@@ -38,13 +38,18 @@
 		font-weight bold
 		line-height 1.5
 		margin 0 auto
+		max-width pxToRem(320)
 		text-align center
 
 		@media (min-width: 720px)
 			min-height pxToRem(96)
 
+		@media $screen-lg-min
+			min-height 0
+
 	& .btn-cta.next
 		float none
+		margin-top $mediumSpace
 		margin-left auto
 		margin-right auto
 		display block
