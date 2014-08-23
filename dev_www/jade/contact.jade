@@ -5,36 +5,33 @@ script
 		window.siteSettings = window.siteSettings || {}
 		window.siteSettings.page = 'contact'
 
-.content.content-contact
-	.content-block
-		h3 Contact Me
+.content.content-contact.content-block
+	h3 Contact Me
 
 
-		form#form-contact.form-contact
-			.form-contact-intro
-				p If I can be of help, if you&rsquo;d like to work together or if you just want to say &lsquo;Hey!&rsquo; please shoot me a message.
+	form#form-contact.form-contact
+		.form-contact-intro
+			p If I can be of help, if you&rsquo;d like to work together or if you just want to say &lsquo;Hey!&rsquo; please shoot me a message.
 
-				p Thanks,<br />Nick
+		label
+			span *Name
+			input#name(name="name", placeholder="ex. John Smith", required)
 
-			label
-				span *Name
-				input#name(name="name", placeholder="ex. John Smith", required)
+		label
+			span *Email
+			input#email(name="email", placeholder="ex. john@smith.com", type="email", required)
 
-			label
-				span *Email
-				input#email(name="email", placeholder="ex. john@smith.com", type="email", required)
+		label
+			span Phone
+			input#phone(name="phone")
 
-			label
-				span Phone
-				input#phone(name="phone")
+		label
+			span *Message
+			textarea#message(name="message", required)
 
-			label
-				span *Message
-				textarea#message(name="message", required)
+		button#submit.btn-cta.full-width submit
 
-			button#submit.btn-cta.full-width submit
-
-			p#response.response
+		p#response.response
 
 //- ul.content
 //- 	include includes/content-boxes
