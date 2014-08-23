@@ -11,27 +11,70 @@
 	&:hover
 		background $darkBlue
 
+		&.next:after
+			border-left-color $darkBlue
+
+		&.previous:after
+			border-right-color $darkBlue
+
 	&.full-width
 		text-align center
 		width 100%
+	
+	&.next,
+	&.previous
+		&:after
+			border-bottom pxToRem(20) solid transparent
+			border-top pxToRem(20) solid transparent
+			content ''
+			display block
+			height 0
+			position absolute
+			top 0
+			width 0
+
+			transition border-color 0.3s ease
+		
 
 	&.next
 		float right
 		font-size 1.3rem
-		margin-top $mediumSpace
-		padding .4rem 0
+		line-height 1.44
+		margin-right pxToRem(20)
+		margin-bottom $smallSpace
+		position relative
 		text-align center
-		width 60%
+		width 40%
 
-	& span
-		font-size 1.8rem
-		margin-left .6rem
-		vertical-align middle
+		@media $screen-sm-min
+			margin-right 0
+			width 48%
 
-		// @extend $slashBefore
+		@media (min-width: 848px)
+			margin-right -4rem
 
-		// &::before
-		// 	position static
-		// 	color $white
-		// 	font-size .9rem
-		// 	margin-right .4rem
+		&:after
+			border-left pxToRem(20) solid $blue
+			right -(pxToRem(20))
+
+	&.previous
+		float left
+		font-size 1.3rem
+		line-height 1.44
+		margin-left pxToRem(20)
+		margin-bottom $smallSpace
+		position relative
+		text-align center
+		width 40%
+
+		@media $screen-sm-min
+			margin-left 0
+			width 48%
+
+		@media (min-width: 848px)
+			margin-left -4rem
+
+
+		&:after
+			border-right pxToRem(20) solid $blue
+			left -(pxToRem(20))

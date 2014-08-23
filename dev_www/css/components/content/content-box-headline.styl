@@ -9,11 +9,17 @@
 		padding 100% 1rem 0
 		text-align center
 		width 100%
-		// padding 1rem
-		// position absolute
-		// bottom 0
-		// right 0
-		// width 80%
+
+		& span
+			font-size 4rem
+			vertical-align -0.5rem
+			margin-left 1rem
+
+	&.content-box-headline-home
+		display none
+
+		@media $screen-md-min
+			display flex
 
 .content-box-headline-icon
 	background $lightBlue

@@ -1,8 +1,44 @@
+& [class^="content-box-"],
+& [class*=" content-box-"]
+	@extend $responsiveBox
+	color $white
+	clear both
+	display flex
+	position relative
+	overflow hidden
+
+	@media $screen-sm-min
+		clear none
+
+	& a
+		color $white
+		display flex
+		padding-bottom 100%
+		text-align center
+		width 100%
+
+	& li img
+		max-width 100%
+
 .content-box-portrait
-	background url('../img/nick-desk.jpg')
+	// column(1/1)
+	background url('../img/portrait-box.jpg')
 	background-size cover
 
-	& h2
+	// @media (min-width: 1180px)
+	// 	padding-bottom 33.3333333333333%
+
+	& .content
+		padding 0
+
+	& li:first-child
+		// background rgba(50, 122, 187, 0.7)
+
+	& li:last-child
+		// background rgba(50, 122, 187, 0.7)
+		float right
+
+	& > h2
 		color $darkGrey
 		font-size 1.1rem
 		margin 0
@@ -17,28 +53,28 @@
 		padding-bottom 100%
 		text-align center
 		width 100%
-		opacity 0
+		// opacity 0
 
 		transition opacity .3s ease
 
-	&:after
-		background rgba(255,255,255,0.7)
-		content ''
-		position absolute
-		top 0
-		right 0
-		bottom 0
-		left 0
-		z-index 3
+	// &:after
+	// 	background rgba(255,255,255,0.7)
+	// 	content ''
+	// 	position absolute
+	// 	top 0
+	// 	right 0
+	// 	bottom 0
+	// 	left 0
+	// 	z-index 3
 
 		transition opacity .3s ease
 
-		@media $screen-lg-min
-			opacity 0
+		// @media $screen-lg-min
+		// 	opacity 0
 
-	@media $screen-lg-min
-		&:hover
-			opacity 1
+	// @media $screen-lg-min
+	// 	&:hover
+	// 		opacity 1
 
-			&:after
-				opacity 1
+	// 		&:after
+	// 			opacity 1

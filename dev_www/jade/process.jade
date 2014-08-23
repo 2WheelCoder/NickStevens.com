@@ -15,87 +15,86 @@ ul#primary-content.content.content-primary
 	li.content-box-headline.content-box-headline-tagline
 		p research<br />&mdash;<br />design<br />&mdash;<br />build
 
-	li.content-box.content-box-process.expanded
-		.content-main
-			.content-block
-				h3 Human-Centered Design
-				
-				figure.graphic-hcd
-					img(src="img/desirability-feasability-viability.svg", alt="Desirability, Feasability and Viability Venn Diagram")
-					figcaption Graphic Inspired by IDEO&rsquo;s 
-						a(href="http://www.ideo.com/work/human-centered-design-toolkit/", target="_blank") HCD Toolkit
+.content.content-main
+	.content-block
+		h3 Human-Centered Design
+		
+		figure.graphic-hcd
+			img(src="img/desirability-feasability-viability.svg", alt="Desirability, Feasability and Viability Venn Diagram")
+			figcaption Graphic Inspired by IDEO&rsquo;s 
+				a(href="http://www.ideo.com/work/human-centered-design-toolkit/", target="_blank") HCD Toolkit
 
+		:markdown
+			By trade, I am a coder. I build web and mobile apps. But the process of getting from idea to app requires more than code. Creating a meaningful app is best achieved through a process called Human-Centered Design (HCD).
+
+			Human-Centered Design is a product design process that creates solutions that are desired, feasible and financially viable through a holistic consideration of user and business needs. HCD creates sustainable businesses because users are more loyal to products that respond to their needs, not just the needs of the business.
+
+		.group-icons
+			.icon-interview
+				p research
+			.icon-pencil
+				p design
+			.icon-hammer
+				p build
+
+		:markdown
+			I practice HCD in three phases: research, design and build. These stages are iterative and should be repeated until a solution is achieved. The most effective HCD team is reasonably sized, multidisciplinary and highly collaborative. Every team member contributes at every stage. Though as a developer most of my responsibilities are in the build phase, I’ve practiced every phase of the process.
+
+
+			#### Research
+			Research is essential to designing solutions that meet the needs of the user and the business. **The goal of this phase is to uncover actionable insights that can guide design.**
+
+			Secondary research is great for understanding an industry or environment, but the most valuable insights come from primary research. Interviewing stakeholders and users can reveal the requirements or constraints of the final solution. Once research is complete, actionable insights are conveyed through one or more personas. Personas are a summary of the intended user’s behaviors, attitudes, needs and environment.
+
+			It’s incredibly important to manage personal bias and genuinely listen to user needs. Designing a meaningful solution can’t be done without a genuine understanding of the user.
+
+			#### Design
+			The design stage applies actionable insights learned in the research stage to create solutions that are desired, feasible and financially viable. **Creating a meaningful solution requires paying strict attention to the needs of the user while balancing the scope, available resources and business requirements.** A meaningful solution should not distract a user or impede their progress towards what they deem meaningful.
+
+			Depending on the stakeholders, audience and available resources the design phase can look very different with each project.
+
+		.content-lists
+			.content-list
 				:markdown
-					By trade, I am a coder. I build web and mobile apps. But the process of getting from idea to app requires more than code. Creating a meaningful app is best achieved through a process called Human-Centered Design (HCD).
+					##### Areas of Consideration
+					- business strategy
+					- content strategy
+					- visual branding
+					- experience design
+					- interface design
+					- systems architecture
 
-					Human-Centered Design is a product design process that creates solutions that are desired, feasible and financially viable through a holistic consideration of user and business needs. HCD creates sustainable businesses because users are more loyal to products that respond to their needs, not just the needs of the business.
-
-				.group-icons
-					.icon-interview
-						p research
-					.icon-pencil
-						p design
-					.icon-hammer
-						p build
-
+			.content-list
 				:markdown
-					I practice HCD in three phases: research, design and build. These stages are iterative and should be repeated until a solution is achieved. The most effective HCD team is reasonably sized, multidisciplinary and highly collaborative. Every team member contributes at every stage. Though, as a developer most of my responsibilities are in the build phase, I’ve practiced every phase of the process.
+					##### Example Deliverables
+					- competitive analysis
+					- business model canvas
+					- key messages
+					- content examples
+					- flow charts
+					- style guides
+					- wireframes
+					- style tiles
+					- interface comps
+					- systems diagrams
 
+	.content-block
+		:markdown
+			#### Build
+			After the design phase has produced one or many solutions, a prototype is built and the process returns to the research phase for testing. Or, if the solution has been vetted the product is built and released to be tested in the real world.
 
-					#### Research
-					Research is essential to designing solutions that meet the needs of the user and the business. The goal of this phase is to uncover actionable insights that can guide design.
+			**Design decisions are constantly made while coding. Just because the product is being built doesn’t mean that design is done.  A developer who can recognize potential user experience fails is essential to reducing development time, or worse, avoiding the release of a bad product.**
 
-					Secondary research is great for understanding an industry or environment, but the most valuable insights come from primary research. Interviewing stakeholders and users can reveal the requirements or constraints of the final solution. Once research is complete, actionable insights are conveyed through one or more personas. Personas are a summary of the intended user’s behaviors, attitudes, needs and environment.
+			Early builds are often a clickable prototype using a tool such as [Flinto](https://www.flinto.com/ "Flinto") or [Invision](http://www.invisionapp.com/ "Invision"). However, as a developer I prefer to move to code as soon as possible. Occasionally, I code a quick prototype with [Bootstrap](http://getbootstrap.com/ "Bootstrap"), but if a visual design language already exists I can quickly create a framework using custom tools and pre-built libraries from [npm](http://npmjs.org "npm").
 
-					It’s incredibly important to manage personal bias and genuinely listen to user needs. Designing a meaningful solution can’t be done without a genuine understanding of the user.
+			Web apps are built using HTML, CSS and JavaScript. For mobile apps I have used HTML, CSS and JavaScript in Phonegap, but I’ve recently been learning Objective-C, Swift and Xcode to build native iOS apps. I have experience with PHP for server-side code, but more recently I’ve been using Node.js. Everything I code is modular and semantic so that it can be reused and easily understood by other developers.
 
-					#### Design
-					The design stage applies actionable insights learned in the research stage to create solutions that are desired, feasible and financially viable. Creating a meaningful solution requires paying strict attention to the needs of the user while balancing the scope, available resources and business requirements. A meaningful solution should not distract a user or impede their progress towards what they deem meaningful.
+	a.btn-cta.previous(href="/index.html") Vision
+	a.btn-cta.next(href="/process.html") Projects
 
-					Depending on the stakeholders, audience and available resources the design phase can look very different with each project.
+ul.content
+	include includes/content-boxes
 
-				.content-lists
-					.content-list
-						:markdown
-							##### Areas of Consideration
-							- business strategy
-							- content strategy
-							- visual branding
-							- experience design
-							- interface design
-							- systems architecture
-
-					.content-list
-						:markdown
-							##### Example Deliverables
-							- competitive analysis
-							- business model canvas
-							- key messages
-							- content examples
-							- flow charts
-							- style guides
-							- wireframes
-							- style tiles
-							- interface comps
-							- systems diagrams
-
-			.content-block
-				:markdown
-					#### Build
-					After the design phase has produced one or many solutions, a prototype is built and the process returns to the research phase for testing. Or, if the solution has been vetted the product is built and released to be tested in the real world.
-
-					Coders are designers, too, and just because the product is being built doesn’t mean that design is done. Design decisions are constantly made in code. Recognizing potential user experience fails is essential to reducing development time, or worse, avoiding the release of a bad product.
-
-					An early build is often a clickable prototype of wireframes using a tool such as [Flinto](https://www.flinto.com/ "Flinto") or [Invision](http://www.invisionapp.com/ "Invision"). However, as a developer I prefer to move to code as soon as possible. Occasionally, I code a quick prototype with [Bootstrap](http://getbootstrap.com/ "Bootstrap"), but if a visual design language already exists I can quickly create a framework using custom tools and pre-built libraries from [npm](http://npmjs.org "npm").
-
-					Web apps are built using HTML, CSS and JavaScript. For mobile apps I have used HTML, CSS and JavaScript in Phonegap, but I’ve recently been learning Objective-C, Swift and Xcode to build native iOS apps. I have experience with PHP for server-side code, but more recently I’ve been using Node.js. Everything I code is modular and semantic so that it can be reused and easily understood by other developers.
-
-				a.btn-cta.full-width(href="/projects") See the Process in Action
-
-	//- include includes/main-nav
-
-	//- include includes/content-boxes
-
-ul#secondary-content.content
+//- ul#secondary-content.content
 
 include includes/footer

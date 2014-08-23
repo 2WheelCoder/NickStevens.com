@@ -5,36 +5,33 @@ script
 		window.siteSettings = window.siteSettings || {}
 		window.siteSettings.page = 'contact'
 
-ul#primary-content.content
-	li.content-box.content-box-contact.expanded
-		.content-main
-			.content-block
-				h3 Contact Me
+.content.content-main
+	.content-block
+		h3 Contact Me
 
-				form#form-contact.form-contact
-					label
-						span *Name
-						input#name(name="name", placeholder="ex. John Smith", required)
+		form#form-contact.form-contact
+			label
+				span *Name
+				input#name(name="name", placeholder="ex. John Smith", required)
 
-					label
-						span *Email
-						input#email(name="email", placeholder="ex. john@smith.com", type="email", required)
+			label
+				span *Email
+				input#email(name="email", placeholder="ex. john@smith.com", type="email", required)
 
-					label
-						span Phone
-						input#phone(name="phone")
+			label
+				span Phone
+				input#phone(name="phone")
 
-					label
-						span *Message
-						textarea#message(name="message", required)
+			label
+				span *Message
+				textarea#message(name="message", required)
 
-					button#submit.btn-cta submit
-	
-					p#response.response
+			button#submit.btn-cta submit
 
-	include includes/main-nav
+			p#response.response
 
-ul#secondary-content.content
+//- ul.content
+//- 	include includes/content-boxes
 	
 script(src="http://www.parsecdn.com/js/parse-1.2.16.min.js")
 

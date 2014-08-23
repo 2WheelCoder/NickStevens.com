@@ -27,7 +27,7 @@ serverport = 3000
 options =
 	gzippedOnly : true
 aws = JSON.parse(fs.readFileSync('./aws.json'))
- 
+
 # We only configure the server here and start it only when running the watch task
 server = express()
 # Add livereload middleware before static-middleware

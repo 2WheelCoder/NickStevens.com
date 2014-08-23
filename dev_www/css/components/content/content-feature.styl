@@ -1,0 +1,95 @@
+.content-features
+	// margin-top $mediumSpace
+	width 100%
+
+	@media (min-width: 720px)
+		align-items stretch
+		display flex
+
+.content-feature
+	border-bottom 2px solid $grey
+	display block
+	margin $mediumSpace $mediumSpace 0
+	padding 0 0 $mediumSpace
+
+	@media (min-width: 720px)
+		column(1/2, gutter: 0)
+		padding 0 $mediumSpace $mediumSpace
+
+		&:last-child
+			border-left 2px solid $grey
+
+	& h3
+		color $darkBlue
+		font-size 2rem
+		text-align center
+
+	& img
+		display block
+		margin 0 auto $mediumSpace
+		width 90%
+
+		@media (min-width: 360px)
+			height 16rem
+			width auto
+
+	& p
+		color $darkGrey
+		font-weight bold
+		line-height 1.5
+		margin 0 auto
+		text-align center
+
+		@media (min-width: 720px)
+			min-height pxToRem(96)
+
+	& .btn-cta.next
+		float none
+		margin-left auto
+		margin-right auto
+		display block
+		width 100%
+
+.content-features-secondary
+
+	@media $screen-sm-min
+		align-items stretch
+		display flex
+		
+
+.content-feature-secondary
+	display block
+	margin 0 $mediumSpace
+	padding $mediumSpace 0
+
+	&:first-child
+		border-bottom 2px solid $grey
+
+	@media $screen-sm-min
+		column(1/2, gutter: 0)
+		margin $mediumSpace 0
+		padding 0
+
+		&:first-child
+			border none
+			border-right 2px solid $grey
+
+	& h3
+		color $blue
+		font-size 2rem
+		text-align center
+
+		transition font-size .3s ease
+
+	& [class^="icon-"],
+	& [class*=" icon-"]
+		color $blue
+		font-size 6rem
+		text-align center
+
+		transition transform .3s ease
+
+	&:hover
+		& [class^="icon-"],
+		& [class*=" icon-"]
+			transform scale3d(1.2, 1.2, 1)

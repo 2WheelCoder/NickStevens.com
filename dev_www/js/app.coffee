@@ -6,34 +6,36 @@ class App
 	constructor : () ->
 		@$window = $(window)
 		@$navPrimary = $('#nav-primary')
-		@$headerWrapper = $('#header-wrapper')
+		# @$headerWrapper = $('#header-wrapper')
 		@$body = $('body')
 		@attachEvents()
-		@$primaryContent = $('#primary-content')
+		# @$primaryContent = $('#primary-content')
 
-		@$primaryContent.find('.nav-' + window.siteSettings.page).hide()
+		# @$primaryContent.find('.nav-' + window.siteSettings.page).hide()
 
-		@$primaryContent
-			.children('.nav-contact')
-			.last()
-			.nextAll()
-			.remove()
-			.appendTo('#secondary-content')
+		# @$primaryContent
+		# 	.children('.nav-contact')
+		# 	.last()
+		# 	.nextAll()
+		# 	.remove()
+		# 	.appendTo('#secondary-content')
 
 		if window.siteSettings? and window.siteSettings.page is 'contact'
 			new Contact()
 
+		# @$headerWrapper.remove().appendTo('body')
+
 	attachEvents : () =>
 		self = @
 
-		if @$window.width() >= 769
+		if window.innerWidth >= 886
 			@$window.on 'scroll touchmove', ->
 				if self.$window.scrollTop() > 0
 					self.$body.addClass 'compact'
 				else
 					self.$body.removeClass 'compact'
 
-		if @$window.width() < 481
+		if window.innerWidth < 481
 			$('#header-menu-btn').click ->
 				self.$navPrimary.slideToggle()
 
