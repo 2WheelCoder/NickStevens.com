@@ -104,7 +104,23 @@ ul.content
 			a(href="https://www.linkedin.com/profile/view?id=33217625&authType=name&authToken=gzTa&locale=en_US&pvs=pp&trk=ppro_viewmore#endorsements", target="_blank") LinkedIn
 			|.
 
-ul.content
-	include ../includes/content-boxes
+.content
+	.content-block
+		h3.content-block-header projects
+
+include ../includes/projects-nav
+
+.content
+	.content-features-secondary
+		a(href="/about.html").content-feature-secondary.content-feature-about
+			h3 about
+			.icon-beard
+
+		//- .content-feature-divider
+		//- 	.icon-slashes
+
+		a(href="/contact.html").content-feature-secondary.content-feature-contact
+			h3 contact
+			.icon-mail
 
 include ../includes/footer
