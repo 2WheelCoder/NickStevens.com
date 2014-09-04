@@ -41,13 +41,35 @@
 
 		transition transform .3s ease
 
+.content-box-project-page
+	& p
+		align-self center
+		color $white
+		font-size 1.3rem
+		// font-weight bold
+		margin 0 auto
+		padding 100% 1rem 0
+		position relative
+		text-align center
+		width 100%
+		z-index 3
+
+		@media $screen-md-min
+			display none
+	
+	& + .content-box-description
+		display none
+
+		@media $screen-md-min
+			display flex
 
 .content-box-project-hooch
 	background-image linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,.65) 50%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 100%), url('../img/portfolio/portfolio-21.jpg')
 	// background-image linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,.65) 50%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 100%), url('../img/portfolio/portfolio-19.jpg')
 
 	&.no-shadow
-		background-image url('../img/portfolio/portfolio-21.jpg')
+		@media $screen-md-min
+			background-image url('../img/portfolio/portfolio-21.jpg')
 
 	&:after
 		background-color rgba(52, 123, 187, .5)
@@ -56,7 +78,8 @@
 	background-image linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,.65) 50%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 100%), url('../img/one-project.jpg')
 	
 	&.no-shadow
-		background-image url('../img/one-project.jpg')
+		@media $screen-md-min
+			background-image url('../img/one-project.jpg')
 
 	& [class^="icon-"],
 	& [class*=" icon-"]
@@ -70,7 +93,18 @@
 	background-image linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,.65) 50%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 100%), url('../img/cue-project.jpg')
 
 	&.no-shadow
-		background-image url('../img/cue-project.jpg')
+		@media $screen-md-min
+			background-image url('../img/cue-project.jpg')
 
 	&:after
 		background-color rgba(52, 123, 187, .5)
+
+.content-box-project-skoop
+	background-image linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,.65) 50%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 100%), url('../img/skoop-a-game.png')
+
+	&.no-shadow
+		@media $screen-md-min
+			background-image url('../img/skoop-a-game.png')
+
+	&:after
+		background-color transparent

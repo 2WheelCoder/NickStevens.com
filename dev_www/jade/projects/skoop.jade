@@ -1,0 +1,97 @@
+include ../includes/header
+
+script
+	:coffee
+		window.siteSettings = window.siteSettings || {}
+		window.siteSettings.page = 'project'
+
+ul.content
+	li.content-box-headline
+		h2 Project: Skoop
+
+	li.content-box-project.content-box-project-skoop.content-box-project-page.no-shadow
+		p Great nutrition is an inalienable right.
+			//- .icon-cue-text
+
+	li.content-box-description
+		p Great nutrition is an inalienable right.
+
+.content.content-main
+	.content-block.deliverables
+		h5 Deliverables
+
+		ul
+			li.deliverables-cue-screenshot
+				a(href="http://healthyskoop.com", target="_blank")
+					h6 Skoop Website
+
+	.content-block
+		//- h3 
+		
+		h4 Overview
+
+		p As part of my final semester in the BDW graduate program I apprenticed part-time at Human Design, a Boulder-based company that creates products that move the human race. During this time I worked with the team to build an e-commerce platform for Skoop. Skoop is a line of powdered, whole-food sourced nutritional products that aim to solve under-nutrition in the US.
+
+		p I had been using Skoop daily for almost a year to boost my nutritional intake. It boosted my ability to focus and lowered my stress levels. Plus, for every serving a Skoop bought they donate a serving of fruits and vegetables to Salad Bars 2 Schools. When we have the right nutrition, challenges and stress level become a lot smaller enabling us to live more meaningful lives.
+
+
+	.content-block
+		h4 Role
+
+		p I managed front-end code for the consumer-facing area of the site. This included determining strategies for responsive layouts, setting up build scripts, choosing plugins to extend site functionality and more.
+
+		h5 Process
+
+		p The process for healthySkopp.com was fairly agile. Design was still in process when I began coding the site, but by building modularly and communicating often with the design team we were able to design and develop simultaneously. The UX experience I acquired from BDW enabled me to identify user experience issues before developing them, which cut down on development time and the need to rebuild experiences that that didn&rsquo;t work. After identifying these issues, I often collaborated with the design team to suggest solutions to ux challenges.
+		
+	.content-block.content-lists
+		.content-list
+			h5 Responsibilities
+			ul
+				li translating Illustrator designs to HTML, CSS and JavaScript
+				li identifying user experience roadblocks
+				li translating desktop designs to mobile
+				li developing build scripts
+
+		.content-list
+			h5 Technologies
+			:markdown
+				- Node.js
+				- Gulp
+				- Browserify
+				- Coffeescript
+				- Stylus w/ Nib
+				- Jeet
+				- Jade
+
+	.content-block
+		h4 Outcome
+
+		p Cue is constantly evolving and we are still building the beta version of the app, but we&rsquo;ve managed to create a strong foundation for the company in the following areas:
+
+		ul
+			li adoption strategy
+			li business strategy
+			li app development (in progress)
+			li UI Design
+
+.content
+	.content-block
+		h3.content-block-header projects
+
+include ../includes/projects-nav
+
+.content
+	.content-features-secondary
+		a(href="/about.html").content-feature-secondary.content-feature-about
+			h3 about
+			.icon-beard
+
+		//- .content-feature-divider
+		//- 	.icon-slashes
+
+		a(href="/contact.html").content-feature-secondary.content-feature-contact
+			h3 contact
+			.icon-mail
+
+include ../includes/footer
