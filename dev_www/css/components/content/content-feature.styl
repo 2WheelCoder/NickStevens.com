@@ -84,7 +84,8 @@
 		font-size 2rem
 		text-align center
 
-		transition font-size .3s ease
+		// transition font-size .3s ease
+		transition color .3s ease
 
 	& [class^="icon-"],
 	& [class*=" icon-"]
@@ -92,9 +93,15 @@
 		font-size 6rem
 		text-align center
 
-		transition transform .3s ease
+		// transition transform .3s ease
+		transition color .3s ease
 
 	&:hover
 		& [class^="icon-"],
 		& [class*=" icon-"]
-			transform scale3d(1.2, 1.2, 1)
+			// transform scale3d(1.2, 1.2, 1)
+			color $darkBlue
+
+		& h3
+			color $darkBlue
+
