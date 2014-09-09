@@ -1,0 +1,73 @@
+include ../includes/header
+
+script
+	:coffee
+		window.siteSettings = window.siteSettings || {}
+		window.siteSettings.page = 'project'
+
+ul.content
+	li.content-box-headline
+		h2 Project: Nike
+
+	li.content-box-project.content-box-project-nike-nwm.content-box-project-page.no-shadow
+		p Nike Women&rsquo;s Marathon
+			//- .icon-cue-text
+
+	li.content-box-description
+		p Nike Women&rsquo;s Marathon
+
+.content.content-main
+	//- .content-block.content-double-carousel
+	//- 	#carousel-feature.carousel.carousel-feature
+	//- 		div
+	//- 			img(src="/img/deliverables/nike/race-interface.jpg", alt="Nike Women's Marathon Race Interface")
+	//- 		div
+	//- 			img(src="/img/deliverables/nike/pre-race.jpg", alt="Nike Women's Marathon Pre-Race Page")
+
+	//- 	#carousel-nav.carousel.carousel-nav
+	//- 		div
+	//- 			img(src="/img/deliverables/nike/race-interface.jpg", alt="Nike Women's Marathon Race Interface")
+	//- 		div
+	//- 			img(src="/img/deliverables/nike/pre-race.jpg", alt="Nike Women's Marathon Pre-Race Page")
+
+	.content-block
+		figure.featured-image
+			img(src="/img/deliverables/nike/race-interface.jpg", alt="Nike Women's Marathon Race Interface")
+			figcaption Live Race Day App
+		
+		h4 Overview
+
+		p Every year Nike holds a marathon for women in DC and San Francisco. In collaboration with On Board Experiential Marketing, I coded a number of pieces of collateral for the races including emails, custom Facebook pages and a web app. The web app allowed the public to track their friends and family live as they ran the race.
+
+		figure.featured-image
+			img(src="/img/deliverables/nike/pre-race.jpg", alt="Nike Women's Marathon Pre-Race Page")
+			figcaption Pre-Race Day Page
+
+	//- .content-block
+
+		//- h4 Role
+
+		//- p I coded all front end styling and animation for the web app, which consisted of HTML, CSS and JavaScript.
+
+	a(href="http://werundclive.com").btn-cta.full-width View the App
+
+.content
+	.content-block
+		h3.content-block-header projects
+
+include ../includes/projects-nav
+
+.content
+	.content-features-secondary
+		a(href="/about.html").content-feature-secondary.content-feature-about
+			h3 about
+			.icon-beard
+
+		//- .content-feature-divider
+		//- 	.icon-slashes
+
+		a(href="/contact.html").content-feature-secondary.content-feature-contact
+			h3 contact
+			.icon-mail
+
+include ../includes/footer

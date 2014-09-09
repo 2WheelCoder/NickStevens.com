@@ -1,29 +1,23 @@
-$ = require 'jquery'
+$ = require 'jquery-browserify'
 Contact = require './Contact'
-# stroll = require './vendor/stroll.min.js'
+require 'slick-carousel'
 
 class App
 	constructor : () ->
 		@$window = $(window)
 		@$navPrimary = $('#nav-primary')
-		# @$headerWrapper = $('#header-wrapper')
+		@$headerWrapper = $('#header-wrapper')
 		@$body = $('body')
 		@attachEvents()
-		# @$primaryContent = $('#primary-content')
-
-		# @$primaryContent.find('.nav-' + window.siteSettings.page).hide()
-
-		# @$primaryContent
-		# 	.children('.nav-contact')
-		# 	.last()
-		# 	.nextAll()
-		# 	.remove()
-		# 	.appendTo('#secondary-content')
 
 		if window.siteSettings? and window.siteSettings.page is 'contact'
 			new Contact()
 
-		# @$headerWrapper.remove().appendTo('body')
+		@$headerWrapper.remove().appendTo('body')
+
+		if window.siteSettings? and window.siteSettings.page is 'project'
+			@initSlick()
+
 
 	attachEvents : () =>
 		self = @
@@ -39,14 +33,23 @@ class App
 			$('#header-menu-btn').click ->
 				self.$navPrimary.slideToggle()
 
-			# windowHeight = $(window).height()
-			# console.log windowHeight
-			# headerHeight = $('.header-wrapper').height()
-			# console.log headerHeight
-			# height = windowHeight - headerHeight
-			# console.log height
-			# $('section.content ul').height height
-			# stroll.bind 'section.content ul'
+
+	initSlick : () ->
+		$('#carousel-feature').slick
+			slidesToShow: 1
+			slidesToScroll: 1
+			arrows: false
+			fade: true
+			asNavFor: '#carousel-nav'
+
+		$('#carousel-nav').slick
+			slidesToShow: 3
+			slidesToScroll: 1
+			asNavFor: '#carousel-feature'
+			dots: true
+			centerMode: true
+			focusOnSelect: true
+
 
 $ ->
 	window.NickStevens = new App()
