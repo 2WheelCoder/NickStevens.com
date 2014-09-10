@@ -15,8 +15,8 @@ class App
 
 		@$headerWrapper.remove().appendTo('body')
 
-		if window.siteSettings? and window.siteSettings.page is 'project'
-			@initSlick()
+		# if window.siteSettings? and window.siteSettings.page is 'project'
+		# 	@initSlick()
 
 
 	attachEvents : () =>

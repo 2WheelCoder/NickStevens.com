@@ -37,12 +37,30 @@
 				&::after
 					display none
 
+		&.active,
+		&:hover
+			&:after
+				bottom 0.4rem
+
+			& a
+				border-bottom 3px solid $blue
+				margin-bottom -.4rem
+				padding-bottom .4rem
+
 		&:last-child
 			& a
 				border-bottom 1px solid rgba(0,0,0,0.1)
 
-				@media $screen-sm-min
+			@media $screen-sm-min
+				a
 					border none
+
+				&.active
+				&:hover
+					border-bottom 3px solid $blue
+					margin-bottom -.4rem
+					padding-bottom .4rem
+
 
 		& a
 			color $blue
@@ -50,9 +68,6 @@
 			display block
 			font-size 1rem
 			padding .75rem 0
-
-			&:hover
-				text-decoration overline
 
 			@media $screen-sm-min
 				border none

@@ -23,7 +23,7 @@
 
 	& a
 		position relative
-		display block
+		display flex
 		height 0
 		padding-bottom 100%
 		text-align center
@@ -56,20 +56,17 @@
 		@extend $visuallyHidden
 
 	& h6
+		align-self center
 		color $blue
 		font-size 1.1rem
 		margin 0
-		padding 0.5rem
+		padding 100% 0.5rem 0
 		position relative
-		top 0
+		width 100%
 		z-index 6
-		
-		@media $screen-sm-min
-			top 1rem
 
 		@media $screen-lg-min
 			opacity 0
-			top 0
 
 	& .deliverables-cue-userflow
 		background $blue url('../img/deliverables/cue/userflow.png')
