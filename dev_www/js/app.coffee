@@ -8,13 +8,14 @@ class App
 		@$navPrimary = $('#nav-primary')
 		@$headerWrapper = $('#header-wrapper')
 		@$body = $('body')
-		@attachEvents()
 
 		if window.siteSettings? and window.siteSettings.page is 'contact'
 			new Contact()
+			$('#nav-contact').addClass 'active'
 
 		@$headerWrapper.remove().appendTo('body')
 
+		@attachEvents()
 		# if window.siteSettings? and window.siteSettings.page is 'project'
 		# 	@initSlick()
 

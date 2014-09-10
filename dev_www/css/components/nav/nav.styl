@@ -39,13 +39,14 @@
 
 		&.active,
 		&:hover
-			&:after
-				bottom 0.4rem
+			@media $screen-sm-min
+				&:after
+					bottom 0.2rem
 
-			& a
-				border-bottom 3px solid $blue
-				margin-bottom -.4rem
-				padding-bottom .4rem
+				& a
+					border-bottom .2rem solid $blue
+					margin-bottom -.4rem
+					padding-bottom .2rem
 
 		&:last-child
 			& a
