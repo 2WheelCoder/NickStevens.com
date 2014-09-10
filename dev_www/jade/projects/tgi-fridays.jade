@@ -1,0 +1,53 @@
+include ../includes/header
+
+script
+	:coffee
+		window.siteSettings = window.siteSettings || {}
+		window.siteSettings.page = 'project'
+
+ul.content
+	li.content-box-headline
+		h2 Project:<br />TGI Friday&rsquo;s
+
+	li.content-box-project.content-box-project-tgi-fridays.content-box-project-page.no-shadow
+		p Endless Apps Countdown
+			//- .icon-cue-text
+
+	li.content-box-description
+		p Endless Apps Countdown
+
+.content.content-main
+	.content-block
+		figure.featured-image
+			img(src="/img/deliverables/tgi-fridays/endless-apps-landing.png", alt="Endless Apps Landing Page")
+			figcaption Endless Apps Landing Page
+		
+		h4 Overview
+
+		:markdown
+			When TGI Friday’s created the Endless Apps promotion their legal team found themselves in a predicament: how do you end an “endless” promotion? Fights between the marketing team and legal team broke out in front of the public on Twitter. It was a mess, but the public was literally eating it up.
+
+			Then came an idea. What if we leave it up to customers to keep Endless Apps going? So we built the Endless App countdown. Everytime you retweet the Endless App Tweet you add time to the clock. The apps keep coming unti the clock runs out.
+
+	a(href="https://www.tgifridays.com/endlessapps", target="_blank").btn-cta.full-width View the Endless Apps Countdown
+
+.content
+	.content-block
+		h3.content-block-header projects
+
+include ../includes/projects-nav
+
+.content
+	.content-features-secondary
+		a(href="/about.html").content-feature-secondary.content-feature-about
+			h3 about
+			.icon-beard
+
+		//- .content-feature-divider
+		//- 	.icon-slashes
+
+		a(href="/contact.html").content-feature-secondary.content-feature-contact
+			h3 contact
+			.icon-mail
+
+include ../includes/footer
