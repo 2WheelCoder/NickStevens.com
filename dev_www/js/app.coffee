@@ -9,15 +9,30 @@ class App
 		@$headerWrapper = $('#header-wrapper')
 		@$body = $('body')
 
-		if window.siteSettings? and window.siteSettings.page is 'contact'
-			new Contact()
-			$('#nav-contact').addClass 'active'
-
 		@$headerWrapper.remove().appendTo('body')
 
 		@attachEvents()
-		# if window.siteSettings? and window.siteSettings.page is 'project'
-		# 	@initSlick()
+
+		if window.siteSettings?
+			if window.siteSettings.page is 'contact'
+				$('#nav-contact').addClass 'active'
+				new Contact()
+
+			if window.siteSettings.page is 'project'
+				$('#nav-projects').addClass 'active'
+				# @initSlick()
+
+			if window.siteSettings.page is 'projects'
+				$('#nav-projects').addClass 'active'
+
+			if window.siteSettings.page is 'about'
+				$('#nav-about').addClass 'active'
+
+			if window.siteSettings.page is 'vision'
+				$('#nav-vision').addClass 'active'
+
+			if window.siteSettings.page is 'process'
+				$('#nav-process').addClass 'active'
 
 
 	attachEvents : () =>
