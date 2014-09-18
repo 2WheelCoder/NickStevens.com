@@ -1,8 +1,10 @@
 .group-icons
-	display flex
-	justify-content space-around
-	margin $mediumSpace 0
 	text-align center
+
+	@media $screen-sm-min
+		display flex
+		justify-content space-around
+		margin $mediumSpace 0
 
 	& p
 		color $blue
@@ -16,4 +18,9 @@
 	& [class*=" icon-"]
 		color $blue
 		font-size 4rem
-		width 28%
+
+	> div
+		margin 0 auto $smallSpace
+
+		@media $screen-sm-min
+			margin 0
